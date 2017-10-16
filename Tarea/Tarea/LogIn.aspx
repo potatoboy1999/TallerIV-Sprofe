@@ -4,7 +4,7 @@
     <link href="Estilo/LogIn_Style.css" rel="stylesheet" />
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
-    <div class="jumbotron" id="caja_registro" aria-autocomplete="none">
+    <div class="jumbotron centroPag" id="caja_registro" aria-autocomplete="none">
         <div class="form-group">
             <h1>¡Ingrese ahora!</h1>
             <label>Correo:</label>
@@ -15,7 +15,8 @@
             <asp:TextBox ID="txtPassword" runat="server" CssClass="form-control"></asp:TextBox>
             <asp:RequiredFieldValidator ID="RequiredFieldValidator2" runat="server" ErrorMessage="RequiredFieldValidator" CssClass="error" ControlToValidate="txtPassword">Complete este campo</asp:RequiredFieldValidator>
             <br />
-            <button type="button" class="btn btn-primary">Ingrese</button>
+            <button type="button" class="btn btn-primary">Empecemos!</button>
+            <a href="Registro.aspx" class="btn btn-warning">Registrate!</a>
         </div>
     </div>
 </asp:Content>

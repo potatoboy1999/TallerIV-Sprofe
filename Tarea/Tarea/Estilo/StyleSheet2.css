@@ -1,5 +1,6 @@
 ﻿body {
-    background-image: url(https://st.depositphotos.com/1150740/3239/v/950/depositphotos_32395663-stock-illustration-cartoon-woman-teacher-in-glasses.jpg);
+    /*background-image: url(https://st.depositphotos.com/1150740/3239/v/950/depositphotos_32395663-stock-illustration-cartoon-woman-teacher-in-glasses.jpg);*/
+    
 }
 
 #caja_registro, #caja_logIn {
@@ -21,3 +22,20 @@
     background-color: lightgrey;
     border-radius: 10px;
 }
+
+h2 {
+    padding-bottom: 20px;
+    font-weight: bold;
+    color: Highlight;
+}
+
+.labelreg {
+    color: dimgrey;
+    font-weight: bold;
+    
+}
+
+.form-group {
+    margin-bottom: 0px;
+}
+
