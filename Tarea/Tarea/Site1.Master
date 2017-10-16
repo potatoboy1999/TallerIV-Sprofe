@@ -24,6 +24,9 @@
       color: #777;
       text-decoration: none;
   	}
+     body{
+         background-color:gray;
+     }
     </style>
     <asp:ContentPlaceHolder ID="head" runat="server">
     </asp:ContentPlaceHolder>
@@ -45,7 +48,7 @@
             <div id="navbar" class="navbar-collapse collapse">
                 <div class="navbar-form navbar-right">
                 <button type="button" class="btn btn-default" onclick="location.href='Carreras.aspx';"><span class="glyphicon glyphicon-search"></span> Empieza tu búsqueda</button>                               
-                <button type="button" class="btn btn-default" onclick="location.href='#';"><span class="glyphicon glyphicon-envelope"></span> Contáctenos</button>
+                <button type="button" class="btn btn-default" onclick="location.href='Contactenos.aspx';"><span class="glyphicon glyphicon-envelope"></span> Contáctenos</button>
                 </div>                
             </div>
           </div>
