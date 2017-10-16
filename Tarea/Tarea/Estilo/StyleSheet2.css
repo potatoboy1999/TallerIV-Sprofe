@@ -1,5 +1,6 @@
 ﻿body {
-    background-image: url(https://static1.squarespace.com/static/555375fde4b015ee7186e999/t/55ce1938e4b06c2348a4b1bf/1439570234867/background.jpg);
+    /*background-image: url(https://st.depositphotos.com/1150740/3239/v/950/depositphotos_32395663-stock-illustration-cartoon-woman-teacher-in-glasses.jpg);*/
+    
 }
 
 #caja_registro, #caja_logIn {
@@ -22,13 +23,19 @@
     border-radius: 10px;
 }
 
-.centroPag {
-    border-radius: 25px;
-    position: fixed;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+h2 {
+    padding-bottom: 20px;
+    font-weight: bold;
+    color: Highlight;
 }
-.btn btn-primary {
-    padding: 14px 60px;
+
+.labelreg {
+    color: dimgrey;
+    font-weight: bold;
+    
 }
+
+.form-group {
+    margin-bottom: 0px;
+}
+
