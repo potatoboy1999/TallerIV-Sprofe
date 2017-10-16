@@ -1,0 +1,19 @@
+﻿
+
+.container .primario {
+    float: left;
+    width: 50%;
+    text-align: center;
+}
+
+.container .secundario {
+    margin-left: 50%;
+}
+
+h1 {
+    text-align: center;
+}
+
+#auspiciador img,h2 {
+    padding: 15px 0 15px 0;
+}

@@ -1,0 +1,23 @@
+﻿body {
+    background-image: url(https://st.depositphotos.com/1150740/3239/v/950/depositphotos_32395663-stock-illustration-cartoon-woman-teacher-in-glasses.jpg);
+}
+
+#caja_registro, #caja_logIn {
+	width: 50%;
+	margin: auto;
+	padding: 20px;
+}
+
+.validacion {
+    color: orangered;
+}
+
+#presentacion {
+    width: 50%;
+    margin: auto;
+    text-align: center;
+    padding-bottom: 20px;
+    margin-top: 300px;
+    background-color: lightgrey;
+    border-radius: 10px;
+}
