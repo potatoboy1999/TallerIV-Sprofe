@@ -5,7 +5,7 @@
 </asp:Content>
 
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
-    <div class="jumbotron" id="caja_registro" aria-autocomplete="none">
+    <div class="jumbotron centroPag" id="caja_registro" aria-autocomplete="none">
 
         <h2>Regístrese en SProfe!</h2>
         <div class="form-group">

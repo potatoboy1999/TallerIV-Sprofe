@@ -1,5 +1,5 @@
 ﻿body {
-    background-image: url(https://st.depositphotos.com/1150740/3239/v/950/depositphotos_32395663-stock-illustration-cartoon-woman-teacher-in-glasses.jpg);
+    background-image: url(https://static1.squarespace.com/static/555375fde4b015ee7186e999/t/55ce1938e4b06c2348a4b1bf/1439570234867/background.jpg);
 }
 
 #caja_registro, #caja_logIn {
@@ -20,4 +20,15 @@
     margin-top: 300px;
     background-color: lightgrey;
     border-radius: 10px;
+}
+
+.centroPag {
+    border-radius: 25px;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+.btn btn-primary {
+    padding: 14px 60px;
 }
