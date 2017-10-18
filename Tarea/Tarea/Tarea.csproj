@@ -66,6 +66,7 @@
     <Reference Include="System.EnterpriseServices" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="App_Data\Profesores.xml" />
     <Content Include="Contactenos.aspx" />
     <Content Include="Cursos.aspx" />
     <Content Include="css\bootstrap-theme.css" />
@@ -83,6 +84,11 @@
     <Content Include="Imagenes\Logo_usil.png" />
     <Content Include="Imagenes\Opina.png" />
     <Content Include="Imagenes\profe.PNG" />
+    <Content Include="Imagenes\Profesores\destacado.jpg" />
+    <Content Include="Imagenes\Profesores\profe1.jpg" />
+    <Content Include="Imagenes\Profesores\profe2.jpg" />
+    <Content Include="Imagenes\Profesores\profe4.jpg" />
+    <Content Include="Imagenes\Profesores\profe3.jpg" />
     <Content Include="Imagenes\publicidad1.JPG" />
     <Content Include="Inicio.aspx" />
     <Content Include="js\bootstrap.js" />
@@ -91,6 +97,7 @@
     <Content Include="LogIn.aspx" />
     <Content Include="packages.config" />
     <Content Include="Profesor.aspx" />
+    <Content Include="Profesores.aspx" />
     <Content Include="Registro.aspx" />
     <Content Include="Site1.Master" />
     <Content Include="NestedMasterPage1.master" />
@@ -176,6 +183,13 @@
     </Compile>
     <Compile Include="Profesor.aspx.designer.cs">
       <DependentUpon>Profesor.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Profesores.aspx.cs">
+      <DependentUpon>Profesores.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Profesores.aspx.designer.cs">
+      <DependentUpon>Profesores.aspx</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Registro.aspx.cs">
