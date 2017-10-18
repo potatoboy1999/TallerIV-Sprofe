@@ -17,3 +17,8 @@ h1 {
 #auspiciador img,h2 {
     padding: 15px 0 15px 0;
 }
+
+.subtitulo{
+    padding-bottom: 5px;
+    border-bottom: 1px solid rgba(63, 182, 182, 0.45);
+}
