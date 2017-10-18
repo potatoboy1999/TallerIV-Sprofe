@@ -67,7 +67,7 @@
         <div class="profesores">
             <div id="destacado">
                 <h2>Mejor Profe del ciclo</h2>
-                <img src="Imagenes/Profesores/destacado.jpg" />
+                <a href="Profesor.aspx"><img src="Imagenes/Profesores/destacado.jpg" /></a>
                 <p>El mejor profesor de inserte curso de este inserte ciclo :D</p>
             </div>
             <div id="publicidad">
