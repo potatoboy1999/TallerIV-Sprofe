@@ -1,0 +1,33 @@
+﻿body {
+
+}
+
+.descripcion {
+    margin: 40px;
+    width: 50%;
+    background-color: white;
+    border-radius: 10px;
+    float:left;
+}
+h1 {
+    margin: 40px;
+    font-size: 40px;
+    text-align: center;
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+
+}
+
+p {
+    font-size: 20px;
+    text-align: justify;
+    padding: 30px;
+}
+
+.img {
+    margin: 70px;
+    width: 40%;
+    margin-left: 60%;
+    padding: 20px;
+}
