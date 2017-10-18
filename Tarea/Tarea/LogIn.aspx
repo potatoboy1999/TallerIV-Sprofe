@@ -12,7 +12,7 @@
             <asp:RequiredFieldValidator ID="RequiredFieldValidator1" runat="server" ErrorMessage="Complete el campo correo" CssClass="error" ControlToValidate="txtCorreo" Display="Dynamic">Complete este campo</asp:RequiredFieldValidator>
             <br />
             <label>Clave:</label>
-            <asp:TextBox ID="txtPassword" runat="server" CssClass="form-control"></asp:TextBox>
+            <asp:TextBox ID="txtPassword" runat="server" CssClass="form-control" TextMode="Password"></asp:TextBox>
             <asp:RequiredFieldValidator ID="RequiredFieldValidator2" runat="server" ErrorMessage="RequiredFieldValidator" CssClass="error" ControlToValidate="txtPassword">Complete este campo</asp:RequiredFieldValidator>
             <br />
             <button type="button" class="btn btn-primary">Empecemos!</button>

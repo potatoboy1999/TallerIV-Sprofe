@@ -61,12 +61,12 @@
             <h1>Universidades Asociadas</h1>
             <div class="row">
             <div class="col-md-6">
-
+                
                 <img class="img-responsive" src="Imagenes/Logo_usil.png" />
 
             </div>
             <div class="col-md-6">
-                <h2>Universidad San Ignacio de Loyola</h2>
+                <h2><a href="http://www.usil.edu.pe/">Universidad San Ignacio de Loyola</a></h2>
                 <p>
                     Desde el 2017 los alumnos de la universidad San Ignacio de Loyola podrán
                 encontrar al profesor ideal en cada una de las asignaturas que cursen
