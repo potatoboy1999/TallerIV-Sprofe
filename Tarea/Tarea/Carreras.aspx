@@ -1,10 +1,11 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Site1.Master" AutoEventWireup="true" CodeBehind="Carreras.aspx.cs" Inherits="Tarea.startSearch" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
     <style>
+        
         #wrapper{
             background-image:url(Imagenes/estudios.jpg);
             background-size: 1800px 1200px;
-            min-height: 600px;
+            min-height: 100vh;
         }
         label{
             color: white;

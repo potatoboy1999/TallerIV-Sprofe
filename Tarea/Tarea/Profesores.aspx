@@ -4,44 +4,46 @@
     <style>
         #titulo {
             background-color: black;
+            padding:10px;
             color: white;
         }
 
         .profesores {
-            border: 5px solid green;
             color: blue;
             text-align: center;
         }
 
         #destacado {
-            border: 1px solid red;
             float: left;
-            width: 30%;
+            width: 28%;
             text-align: center;
             background-color:white;
+            border-radius: 15px;
         }
-            #destacado img {
-                width: 350px;
-                height: 200px;
-            }
+        #destacado img {
+            width: 350px;
+            height: 200px;
+        }
 
         #publicidad{
             float:right;
-            width:15%;
-            height:1000px;
-            border: 2px solid yellow;
+            width:13%;
+            height:500px;
         }
         #profes {
             background-color:orange;
-            border: 1px solid blue;
+            border-radius: 10px;
             margin-left: 30%;
             text-align: center;
             margin-right:15%;
+            margin-bottom: 15px;
+        }
+        #profes h2{
+            padding: 25px 0 0 0;
         }
 
         .cuadritos {
             text-align: center;
-            border: 1px solid yellow;
             margin: 0 auto;
         }
 

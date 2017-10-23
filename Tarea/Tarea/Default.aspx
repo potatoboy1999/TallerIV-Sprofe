@@ -2,6 +2,9 @@
 
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
     <style>
+        .espacio{
+            min-height:25px;
+        }
         body {
             background-color: gray;
         }
@@ -11,6 +14,9 @@
 
 
 <asp:Content ID="Content2" ContentPlaceHolderID="Superior" runat="server">
+    <div class="espacio">
+
+    </div>
     <div class="container">
         <div class="jumbotron">
             <div class="row">
