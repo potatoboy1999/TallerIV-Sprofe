@@ -67,6 +67,10 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="App_Data\Profesores.xml" />
+    <Content Include="App_Data\Sprofe.mdf" />
+    <Content Include="App_Data\Sprofe_log.ldf">
+      <DependentUpon>Sprofe.mdf</DependentUpon>
+    </Content>
     <Content Include="Contactenos.aspx" />
     <Content Include="Cursos.aspx" />
     <Content Include="css\bootstrap-theme.css" />
