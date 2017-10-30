@@ -9,7 +9,7 @@
         }
 
         .profesores {
-            color: blue;
+            color: #48494f;
             text-align: center;
         }
 
@@ -31,7 +31,7 @@
             height:500px;
         }
         #profes {
-            background-color:orange;
+            background-color:#ffffff;
             border-radius: 10px;
             margin-left: 30%;
             text-align: center;
@@ -58,6 +58,7 @@
         .clear{
             clear:both;
         }
+        
     </style>
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="Body" runat="server">
@@ -70,7 +71,7 @@
             <div id="destacado">
                 <h2>Mejor Profe del ciclo</h2>
                 <a href="Profesor.aspx"><img src="Imagenes/Profesores/destacado.jpg" /></a>
-                <p>El mejor profesor del curso de ... :D</p>
+                <p>El mejor profesor del curso de Lenguaje 2 :D</p>
             </div>
             <div id="publicidad">
                 <img src="Imagenes/publicidad2.jpg" height="645" width="180" />

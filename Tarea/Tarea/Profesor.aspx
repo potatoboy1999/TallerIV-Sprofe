@@ -4,6 +4,11 @@
         p {
             font-size:medium;
         }
+        .info {
+        border-radius:5px;
+        background-color:darkgrey;
+        width:83%;
+        }
 
     </style>
 </asp:Content>
@@ -18,6 +23,7 @@
         <div class="row">
             <div class="col-md-4">
                 <img src="Imagenes/profe.PNG"  class="img-rounded img-responsive" height="450" width="300"/>
+                <div class="info">
                 <p class="text-left">Ing. Musical  </p>
                 <p class="text-left">Máster en musicología </p>
                 <p class="text-left">Máster de la música </p>
@@ -25,7 +31,7 @@
                 <p class="text-left">Máster etnomusicología</p>
                 <p class="text-left">Fundador de SPB (Sociedad de polladas bailables) </p>
                 <p class="text-left">Dj Sans</p>
-               
+               </div>
             </div>
             <div class="col-md-8">
                 <div class="row" style="height:400px;">

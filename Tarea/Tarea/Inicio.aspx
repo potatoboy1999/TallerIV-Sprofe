@@ -56,8 +56,8 @@
             <p><img src="Imagenes/profe.PNG" class="img-responsive img-rounded img-profe" width="200" height="200" /></p>
             <div class="row">
                 <div class="col-md-8">
-                    <p>Nombre del Profe</p>
-                    <p>Nombre del Curso</p>
+                    <p>Smir Perez Navido</p>
+                    <p>ENTRENAMIENTO RITMICO Y AUDITIVO I</p>
                 </div>
                 <div class="col-md-4 puntuaje">
                     <span>9.9</span>
