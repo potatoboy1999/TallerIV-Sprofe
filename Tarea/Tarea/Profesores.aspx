@@ -70,10 +70,10 @@
             <div id="destacado">
                 <h2>Mejor Profe del ciclo</h2>
                 <a href="Profesor.aspx"><img src="Imagenes/Profesores/destacado.jpg" /></a>
-                <p>El mejor profesor de inserte curso de este inserte ciclo :D</p>
+                <p>El mejor profesor del curso de ... :D</p>
             </div>
             <div id="publicidad">
-                Aqui va la publicidad
+                <img src="Imagenes/publicidad2.jpg" height="645" width="180" />
             </div>
             <div id="profes">
                 <h2>Matematica para virgenieros</h2>
