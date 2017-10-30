@@ -3,11 +3,34 @@
     <style>
         p {
             font-size:medium;
+            
         }
-        .info {
-        border-radius:5px;
-        background-color:darkgrey;
-        width:83%;
+
+        h1{
+            /*border: solid;*/
+        }
+
+        #Profe {
+            margin: 20px;
+            padding: 25px;
+            border-radius: 10px;
+            background-color: white;
+        }
+
+        #info {
+            border-bottom: solid;
+            border-bottom-color:cadetblue;
+            margin-bottom: 30px;
+        }
+
+        span {
+            color: cadetblue;
+            font-weight: bold;
+        }
+        .comentarios{
+            border-radius: 10px;
+            background-color: lightgrey;
+            padding: 5px;
         }
 
     </style>
@@ -16,14 +39,13 @@
 
 
 <asp:Content ID="Content2" ContentPlaceHolderID="Body" runat="server">
-    <div class="container">
+    <div class="container" id="Profe">
         <div class="row">
             <h1>Samir Perez Navido</h1>            
         </div>
         <div class="row">
             <div class="col-md-4">
                 <img src="Imagenes/profe.PNG"  class="img-rounded img-responsive" height="450" width="300"/>
-                <div class="info">
                 <p class="text-left">Ing. Musical  </p>
                 <p class="text-left">Máster en musicología </p>
                 <p class="text-left">Máster de la música </p>
@@ -31,16 +53,16 @@
                 <p class="text-left">Máster etnomusicología</p>
                 <p class="text-left">Fundador de SPB (Sociedad de polladas bailables) </p>
                 <p class="text-left">Dj Sans</p>
-               </div>
+               
             </div>
             <div class="col-md-8">
                 <div class="row" style="height:400px;">
                     <div class="col-md-8">
-                        <h1>Información General:</h1>
-                        <p>Curso: Entrenamiento Rítmico y Auditivo I</p>
-                        <p>% de aceptación: 85%</p>
-                        <p>% de aprobados por ciclo: 80%</p>
-                        <p>Años de experiencia: 6 años</p>
+                        <h1 id="info">Información General</h1>
+                        <p><span>Curso: </span>Entrenamiento Rítmico y Auditivo I</p>
+                        <p><span>% de aceptación: </span>85%</p>
+                        <p><span>% de aprobados por ciclo: </span>80%</p>
+                        <p><span>Años de experiencia: </span>6 años</p>
                     </div>
                     <div class="col-md-4" style="overflow:scroll;">
                         <img src="Imagenes/publicidad1.JPG" />
@@ -49,11 +71,17 @@
                 <div class="row">
                     <h1>Comentarios:</h1>
                     <h2>Comentario positivo más reciente:</h2>
-                    <h3>El profesor es divertido</h3>
-                    <p>Si quieres divertirte y aprender yo recomiendo a este profe</p>
+                    <div class="comentarios">
+                        <h3>El profesor es divertido</h3>
+                        <p>Si quieres divertirte y aprender yo recomiendo a este profe</p>
+                    </div>
+                    
                     <h2>Comentario negativo más reciente:</h2>
-                    <h3>No sabe enseñar</h3>
-                    <p>Muchas veces no se le entiende cuando explica, al final tienes que estudiar por tu cuenta para entender los temas </p>
+                    <div class="comentarios">
+                        <h3>No sabe enseñar</h3>
+                        <p>Muchas veces no se le entiende cuando explica, al final tienes que estudiar por tu cuenta para entender los temas </p>
+                    </div>
+                    
                 <a>Ver más comentarios</a>
                 </div>
             </div>
