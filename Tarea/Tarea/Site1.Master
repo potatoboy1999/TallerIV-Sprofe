@@ -51,8 +51,9 @@
 
             <div id="navbar" class="navbar-collapse collapse">
                 <div class="navbar-form navbar-right">
-                <button type="button" class="btn btn-default" onclick="location.href='Carreras.aspx';"><span class="glyphicon glyphicon-search"></span> Empieza tu búsqueda</button>                               
-                <button type="button" class="btn btn-default" onclick="location.href='Contactenos.aspx';"><span class="glyphicon glyphicon-envelope"></span> Contáctenos</button>
+                    <button type="button" class="btn btn-default" onclick="location.href='Carreras.aspx';"><span class="glyphicon glyphicon-search"></span> Empieza tu búsqueda</button>                               
+                    <button type="button" class="btn btn-default" onclick="location.href='Contactenos.aspx';"><span class="glyphicon glyphicon-envelope"></span> Contáctenos</button>
+                    <button type="button" class="btn btn-primary" onclick="location.href='LogIn.aspx';"><span class="glyphicon glyphicon-user"></span> Ingresa!</button>
                 </div>                
             </div>
           </div>
