@@ -63,10 +63,7 @@
                         <p><span>% de aceptación: </span>85%</p>
                         <p><span>% de aprobados por ciclo: </span>80%</p>
                         <p><span>Años de experiencia: </span>6 años</p>
-                    </div>
-                    <div class="col-md-4" style="overflow:scroll;">
-                        <img src="Imagenes/publicidad1.JPG" />
-                    </div>
+                    </div>                    
                 </div>
                 <div class="row">
                     <h1>Comentarios:</h1>
