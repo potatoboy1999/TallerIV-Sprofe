@@ -1,7 +1,6 @@
-﻿<%@ Page UnobtrusiveValidationMode="none" Title="" Language="C#" MasterPageFile="~/Log.master" AutoEventWireup="true" CodeBehind="Registro.aspx.cs" Inherits="Tarea.Registro" %>
+﻿<%@ Page UnobtrusiveValidationMode="none" Title="" Language="C#" MasterPageFile="Log.master" AutoEventWireup="true" CodeBehind="Registro.aspx.cs" Inherits="Tarea.Registro" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
-    <link href="Estilo/StyleSheet2.css" rel="stylesheet" />
 </asp:Content>
 
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">

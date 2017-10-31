@@ -1,4 +1,4 @@
-﻿<%@ Page UnobtrusiveValidationMode="None" Title="" Language="C#" MasterPageFile="~/Log.master" AutoEventWireup="true" CodeBehind="LogIn.aspx.cs" Inherits="Tarea.LogIn" %>
+﻿<%@ Page UnobtrusiveValidationMode="None" Title="" Language="C#" MasterPageFile="Log.master" AutoEventWireup="true" CodeBehind="LogIn.aspx.cs" Inherits="Tarea.LogIn" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
     <link href="Estilo/LogIn_Style.css" rel="stylesheet" />
