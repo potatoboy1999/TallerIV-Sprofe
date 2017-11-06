@@ -6,7 +6,9 @@
             background-color: cornflowerblue;
             height:auto;
         }
-
+        .space{
+            min-height: 15px;
+        }
         .titulo {
             margin-top: -10px;
             margin-bottom: 40px;
@@ -32,6 +34,7 @@
 </asp:Content>
 
 <asp:Content ID="Content2" ContentPlaceHolderID="Body" runat="server">
+    <div class="space"></div>
     <div class="container">
         <div class="jumbotron">
             <h1>Tu opinión es muy importante... <small>Ayúdanos a mejorar la plataforma</small></h1>

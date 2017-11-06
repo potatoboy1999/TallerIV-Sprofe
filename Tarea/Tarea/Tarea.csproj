@@ -79,6 +79,8 @@
     <Content Include="Imagenes\courses.png" />
     <Content Include="Imagenes\Descubre.png" />
     <Content Include="Imagenes\estudios.jpg" />
+    <Content Include="Imagenes\Fondo.jpg" />
+    <Content Include="Imagenes\ArrowRight.png" />
     <Content Include="Imagenes\Logo.png" />
     <Content Include="Imagenes\Logo_usil.png" />
     <Content Include="Imagenes\Opina.png" />
@@ -89,6 +91,7 @@
     <Content Include="Imagenes\Profesores\profe4.jpg" />
     <Content Include="Imagenes\Profesores\profe3.jpg" />
     <Content Include="Imagenes\publicidad1.JPG" />
+    <Content Include="Ingresar\RegistroExitoso.aspx" />
     <Content Include="js\bootstrap.js" />
     <Content Include="js\bootstrap.min.js" />
     <Content Include="js\npm.js" />
@@ -153,6 +156,13 @@
     </Compile>
     <Compile Include="Ingresar\LogIn.aspx.designer.cs">
       <DependentUpon>LogIn.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Ingresar\RegistroExitoso.aspx.cs">
+      <DependentUpon>RegistroExitoso.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Ingresar\RegistroExitoso.aspx.designer.cs">
+      <DependentUpon>RegistroExitoso.aspx</DependentUpon>
     </Compile>
     <Compile Include="Profesor.aspx.cs">
       <DependentUpon>Profesor.aspx</DependentUpon>
