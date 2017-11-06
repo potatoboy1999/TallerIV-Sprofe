@@ -42,6 +42,7 @@
             <div class="col-md-6">
                 <h2 class="subtitulo">DESCUBRE</h2>
                 <p>Explora entre cientos de profesores usando más 7 criterios! Encuentra a tu profesor ideal!</p>
+                <asp:Button ID="btnBuscar" CssClass="btn btn-warning" runat="server" Text="Busca Ahora!" OnClick="btnBuscar_Click" Width="150" />
             </div>
             <div class="col-md-6">
                 <img class="img-rounded img-responsive" src="Imagenes/Descubre.png" width="400" height="184" />

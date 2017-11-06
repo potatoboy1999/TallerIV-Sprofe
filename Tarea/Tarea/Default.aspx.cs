@@ -13,6 +13,10 @@ namespace Tarea
         {
 
         }
-        
+
+        protected void btnBuscar_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("Carreras.aspx");
+        }
     }
 }
