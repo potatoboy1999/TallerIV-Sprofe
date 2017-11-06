@@ -67,12 +67,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="App_Data\Profesores.xml" />
-    <Content Include="App_Data\Sprofe.mdf" />
-    <Content Include="App_Data\Sprofe_log.ldf">
-      <DependentUpon>Sprofe.mdf</DependentUpon>
-    </Content>
     <Content Include="Contactenos.aspx" />
-    <Content Include="Cursos.aspx" />
     <Content Include="css\bootstrap-theme.css" />
     <Content Include="css\bootstrap-theme.min.css" />
     <Content Include="css\bootstrap.css" />
@@ -99,8 +94,8 @@
     <Content Include="js\npm.js" />
     <Content Include="Ingresar\LogIn.aspx" />
     <Content Include="packages.config" />
-    <Content Include="Profesores\Profesor.aspx" />
-    <Content Include="Profesores\Profesores.aspx" />
+    <Content Include="Profesor.aspx" />
+    <Content Include="Profesores.aspx" />
     <Content Include="Ingresar\Registro.aspx" />
     <Content Include="Site1.Master" />
     <Content Include="fonts\glyphicons-halflings-regular.eot" />
@@ -135,13 +130,6 @@
     <Compile Include="Contactenos.aspx.designer.cs">
       <DependentUpon>Contactenos.aspx</DependentUpon>
     </Compile>
-    <Compile Include="Cursos.aspx.cs">
-      <DependentUpon>Cursos.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="Cursos.aspx.designer.cs">
-      <DependentUpon>Cursos.aspx</DependentUpon>
-    </Compile>
     <Compile Include="Default.aspx.cs">
       <DependentUpon>Default.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -166,18 +154,18 @@
     <Compile Include="Ingresar\LogIn.aspx.designer.cs">
       <DependentUpon>LogIn.aspx</DependentUpon>
     </Compile>
-    <Compile Include="Profesores\Profesor.aspx.cs">
+    <Compile Include="Profesor.aspx.cs">
       <DependentUpon>Profesor.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="Profesores\Profesor.aspx.designer.cs">
+    <Compile Include="Profesor.aspx.designer.cs">
       <DependentUpon>Profesor.aspx</DependentUpon>
     </Compile>
-    <Compile Include="Profesores\Profesores.aspx.cs">
+    <Compile Include="Profesores.aspx.cs">
       <DependentUpon>Profesores.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="Profesores\Profesores.aspx.designer.cs">
+    <Compile Include="Profesores.aspx.designer.cs">
       <DependentUpon>Profesores.aspx</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
