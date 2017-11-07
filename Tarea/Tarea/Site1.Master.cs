@@ -11,7 +11,7 @@ namespace Tarea
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-
+            LabelAño.Text = DateTime.Now.Year.ToString();
         }
     }
 }

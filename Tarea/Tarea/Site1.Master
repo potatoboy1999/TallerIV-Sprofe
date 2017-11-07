@@ -66,7 +66,7 @@
 
 
         <footer class="container-fluid text-center">
-            &copy; 2017 <i style="font-size: 19px;">S</i>profe
+            &copy; <asp:Label ID="LabelAño" runat="server" Text="Año"></asp:Label> <i style="font-size: 19px;">S</i>profe
         </footer>
     </form>
 </body>
