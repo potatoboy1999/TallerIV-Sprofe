@@ -16,9 +16,7 @@
             padding: 5px 10px;
             background-color: black;
         }
-        button {
-            margin: 15px;
-        }
+
 
         #formulario {
             padding: 10px 50px;

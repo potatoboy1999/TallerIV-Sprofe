@@ -16,8 +16,9 @@
             <asp:TextBox ID="txtPassword" runat="server" CssClass="form-control" TextMode="Password"></asp:TextBox>
             <asp:RequiredFieldValidator ID="RequiredFieldValidator2" runat="server" ErrorMessage="RequiredFieldValidator" CssClass="error" ControlToValidate="txtPassword">Complete este campo</asp:RequiredFieldValidator>
             <br />
-            <button type="button" class="btn btn-primary">Empecemos!</button>
-            <a href="Registro.aspx" class="btn btn-warning">Registrate!</a>
+            <asp:Button ID="Button1" CssClass="btn btn-primary" runat="server" Text="Empecemos!" OnClick="Button1_Click" />
+            
+            <a href="Registro.aspx" class="btn btn-warning" onclick="location.href='../Default.aspx';">Registrate!</a>
         </div>
     </div>
 </asp:Content>
