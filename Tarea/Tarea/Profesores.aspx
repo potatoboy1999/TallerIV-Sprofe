@@ -27,6 +27,10 @@
         #publicidad {
             padding: 0;
             padding-left: 1px;
+            height:543px;
+        }
+        #publicidad img{
+            height:543px;
         }
 
         #profes {
@@ -76,7 +80,7 @@
                 <asp:XmlDataSource runat="server" ID="XmlDataSource1" DataFile="~/App_Data/Profesores.xml"></asp:XmlDataSource>
             </div>
             <div id="publicidad" class="col-md-2">
-                <img src="Imagenes/publicidad2.jpg"  class="img-rounded img-responsive" />
+                <img src="Imagenes/publicidad2.jpg" class="img-rounded img-responsive" />
             </div>
             <div class="clear">
             </div>
