@@ -50,6 +50,13 @@
             background-color: lightgrey;
             padding: 5px;
         }
+        .rate {
+            color:black;
+            text-align:center;
+            padding-bottom:50%;
+            font-weight:normal;
+            margin-left:1%;
+        }
     </style>
 </asp:Content>
 
@@ -86,8 +93,10 @@
                         <p><span>% de aceptación: </span>85%</p><br/>
                         <p><span>% de aprobados por ciclo: </span>80%</p><br/>
                         <p><span>Años de experiencia: </span>6 años</p><br/>
-                        <button type="button" onclick="alert('Has recomendado a este profesor')"><img src="https://i.sdpnoticias.com/notas/2013/11/06/201339_Capturadepantalla20131106alas20.13.14.png" style="width:30px; height:30px"  /></button>
-                        <button type="button" onclick="alert('Lamentamos tu mala experiencia D:')"><img src="https://vignette1.wikia.nocookie.net/universosteven/images/5/51/1196px-Not_facebook_not_like_thumbs_down.png/revision/latest?cb=20160528183340&path-prefix=es" style="width:30px; height:30px" /></button>
+                        <div class="boton">
+                       <button type="button" onclick="alert('Has recomendado a este profesor')"><img src="https://i.sdpnoticias.com/notas/2013/11/06/201339_Capturadepantalla20131106alas20.13.14.png" style="width:30px; height:30px"  /></button><span class="rate">70%</span>
+                       <button type="button" onclick="alert('Lamentamos tu mala experiencia D:')" style="margin-left:5%"><img src="https://vignette1.wikia.nocookie.net/universosteven/images/5/51/1196px-Not_facebook_not_like_thumbs_down.png/revision/latest?cb=20160528183340&path-prefix=es" style="width:30px; height:30px" /></button><span class="rate">30%</span></div>
+                    
                     </div>
                 </div>
                 <div class="row">
