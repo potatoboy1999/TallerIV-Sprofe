@@ -3,7 +3,7 @@
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
     <style>
         .contacto {
-            background-color: cornflowerblue;
+            background-color: white;
             height:auto;
         }
         .space{
@@ -31,7 +31,15 @@
             .tamaño{
                 height:565px;
             }
-        }        
+        }  
+        .contacto_div{
+            background-color: #2d2d30;
+            color: white;
+        }
+
+        .contacto_div small{
+            color: lightgray;
+        }
     </style>
 
 </asp:Content>
@@ -39,7 +47,7 @@
 <asp:Content ID="Content2" ContentPlaceHolderID="Body" runat="server">
     <div class="space"></div>
     <div class="container">
-        <div class="jumbotron">
+        <div class="jumbotron contacto_div">
             <h1>Tu opinión es muy importante... <small>Ayúdanos a mejorar la plataforma</small></h1>
 
         </div>
@@ -57,7 +65,7 @@
                         <br />
                         <br />
                         <textarea id="TextArea2" placeholder="Escribenos aquí..."></textarea>
-                        <button type="button" class="btn btn-default" style="margin-top:4px;">Enviar</button>
+                        <button type="button" onclick="alert('Gracias por escribirnos, te responderemos lo más pronto posible!')" class="btn btn-default" style="margin-top:4px;">Enviar</button>
                     </div>
                 </div>
                 <div class="col-md-6">
