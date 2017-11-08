@@ -29,7 +29,7 @@
   	}
      body{
          background-color:gray;
-         background-image: url(https://static1.squarespace.com/static/555375fde4b015ee7186e999/t/55ce1938e4b06c2348a4b1bf/1439570234867/background.jpg);
+         background-image: url('../Imagenes/Fondo.jpg');
      }
     </style>
     <asp:ContentPlaceHolder ID="head" runat="server">
