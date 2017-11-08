@@ -44,7 +44,7 @@
                                     </tr>
                                     <tr>
                                         <td colspan="2">
-                                            <asp:CheckBox runat="server" Text="Record&#225;rmelo la pr&#243;xima vez." ID="RememberMe"></asp:CheckBox>
+                                            <asp:CheckBox runat="server" Text="Mantener la sesión abierta." ID="RememberMe"></asp:CheckBox>
                                         </td>
                                     </tr>
                                     <tr>
@@ -63,6 +63,7 @@
                         </tr>
                     </table>
                 </LayoutTemplate>
-            </asp:Login>               
+            </asp:Login>
+        
     </div>
 </asp:Content>

@@ -63,6 +63,7 @@
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="Body" runat="server">
     <article>
+
         <div id="titulo">
             <h1>Nuestros Docentes </h1>
         </div>
