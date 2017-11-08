@@ -1,22 +1,35 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Site1.Master" AutoEventWireup="true" CodeBehind="Carreras.aspx.cs" Inherits="Tarea.startSearch" %>
+
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
     <style>
-        
-        #wrapper{
-            background-image:url(Imagenes/estudios.jpg);
-            background-size: 1800px 1200px;
-            min-height: 100vh;
+        #wrapper {
+            min-height: 84vh;
         }
-        label{
-            color: white;
+
+        label {
+            color: black;
             padding: 0 15px;
         }
-        .tituloCarreras{
+
+        .tituloCarreras {
             color: white;
             padding: 5px 10px;
             background-color: black;
         }
 
+        .centroPag {
+            border-radius: 25px;
+            margin: auto auto;
+            width: 520px;
+            padding: 15px;
+            margin-top: 10%;
+            /*
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);*/
+
+        }
 
         #formulario {
             padding: 10px 50px;
@@ -36,10 +49,12 @@
         <section class="tituloCarreras">
             <h2>Encuentra a tu profe!</h2>
         </section>
-        <section id="formulario">
+        <section class="jumbotron centroPag" id="formulario">
             <section id="form">
                 <label>Carrera: </label>
+                <br />
                 <asp:DropDownList ID="DropDownList1" runat="server" Height="40px" Width="394px">
+                    <asp:ListItem>Seleccione Carrera</asp:ListItem>
                     <asp:ListItem>Arquitectura</asp:ListItem>
                     <asp:ListItem>Comunicaciones</asp:ListItem>
                     <asp:ListItem>Gastronomia</asp:ListItem>
@@ -51,8 +66,9 @@
                 </asp:DropDownList>
                 <br />
                 <br />
-                <label>Curso:</label>
+                <label>Curso:</label><br />
                 <asp:DropDownList ID="DropDownList2" runat="server" Height="40px" Width="394px">
+                    <asp:ListItem>Seleccione Curso</asp:ListItem>
                     <asp:ListItem>Fisica I</asp:ListItem>
                     <asp:ListItem>Fisica II</asp:ListItem>
                     <asp:ListItem>Taller de Software I</asp:ListItem>

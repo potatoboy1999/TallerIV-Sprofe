@@ -18,5 +18,10 @@ namespace Tarea
         {
             Response.Redirect("../Default.aspx");
         }
+
+        protected void RememberMe_CheckedChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }
