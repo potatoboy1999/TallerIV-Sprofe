@@ -2,24 +2,52 @@
 
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
     <style>
-        table{
-            width:100%;
+        table {
+            width: 100%;
         }
-        table td{
-            padding:5px 15px;
+
+            table td {
+                padding: 5px 15px;
+            }
+
+        td input[type="submit"] {
+            color: #fff;
+            background-color: #337ab7;
+            border-color: #2e6da4;
+            display: inline-block;
+            padding: 6px 12px;
+            margin-bottom: 0;
+            font-size: 14px;
+            font-weight: 400;
+            line-height: 1.42857143;
+            text-align: center;
+            white-space: nowrap;
+            vertical-align: middle;
+            -ms-touch-action: manipulation;
+            touch-action: manipulation;
+            cursor: pointer;
+            -webkit-user-select: none;
+            -moz-user-select: none;
+            -ms-user-select: none;
+            user-select: none;
+            background-image: none;
+            border: 1px solid transparent;
+            border-radius: 4px;
         }
     </style>
 </asp:Content>
 
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
     <div class="centroPag jumbotron">
-        <asp:CreateUserWizard ID="CreateUserWizard1" runat="server">
+        <asp:CreateUserWizard ID="CreateUserWizard1" runat="server" ActiveStepIndex="0">
             <WizardSteps>
                 <asp:CreateUserWizardStep ID="CreateUserWizardStep1" runat="server">
                     <ContentTemplate>
                         <table>
                             <tr>
-                                <td align="center" colspan="2"><h1>Regístrate</h1></td>
+                                <td align="center" colspan="2">
+                                    <h1>Regístrate</h1>
+                                </td>
                             </tr>
                             <tr>
                                 <td align="right">
@@ -51,22 +79,6 @@
                                 <td>
                                     <asp:TextBox runat="server" ID="Email"></asp:TextBox>
                                     <asp:RequiredFieldValidator runat="server" ControlToValidate="Email" ErrorMessage="El correo electr&#243;nico es obligatorio." ValidationGroup="CreateUserWizard1" ToolTip="El correo electr&#243;nico es obligatorio." ID="EmailRequired">*</asp:RequiredFieldValidator>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td align="right">
-                                    <asp:Label runat="server" AssociatedControlID="Question" ID="QuestionLabel">Pregunta de seguridad:</asp:Label></td>
-                                <td>
-                                    <asp:TextBox runat="server" ID="Question"></asp:TextBox>
-                                    <asp:RequiredFieldValidator runat="server" ControlToValidate="Question" ErrorMessage="La pregunta de seguridad es obligatoria." ValidationGroup="CreateUserWizard1" ToolTip="La pregunta de seguridad es obligatoria." ID="QuestionRequired">*</asp:RequiredFieldValidator>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td align="right">
-                                    <asp:Label runat="server" AssociatedControlID="Answer" ID="AnswerLabel">Respuesta de seguridad:</asp:Label></td>
-                                <td>
-                                    <asp:TextBox runat="server" ID="Answer"></asp:TextBox>
-                                    <asp:RequiredFieldValidator runat="server" ControlToValidate="Answer" ErrorMessage="La respuesta de seguridad es obligatoria." ValidationGroup="CreateUserWizard1" ToolTip="La respuesta de seguridad es obligatoria." ID="AnswerRequired">*</asp:RequiredFieldValidator>
                                 </td>
                             </tr>
                             <tr>

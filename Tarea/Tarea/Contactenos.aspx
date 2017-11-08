@@ -16,17 +16,20 @@
         #TextArea1{            
             height:200px;
             width:90%;
+            resize:none;
         }
         #TextArea2{            
             height:150px;
             width:90%;
+            resize:none;
         }
         .input{
             border-radius:4px;
+            padding:5px;
         }
         @media (min-width:992px){
             .tamaño{
-                height:550px;
+                height:565px;
             }
         }        
     </style>
