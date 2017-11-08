@@ -4,95 +4,87 @@
     <style>
         #titulo {
             background-color: black;
-            padding:10px;
+            padding: 10px;
             color: white;
         }
 
-        .profesores {
+        .row {
             color: #48494f;
-            text-align: center;
         }
 
         #destacado {
-            float: left;
-            width: 28%;
-            text-align: center;
-            background-color:white;
+            background-color: white;
             border-radius: 15px;
         }
+
+
         #destacado img {
-            width: 350px;
+            width: 300px;
             height: 200px;
-        }
-
-        #publicidad{
-            float:right;
-            width:13%;
-            height:500px;
-        }
-        #profes {
-            background-color:#ffffff;
-            border-radius: 10px;
-            margin-left: 30%;
-            text-align: center;
-            margin-right:15%;
-            margin-bottom: 15px;
-        }
-        #profes h2{
-            padding: 25px 0 0 0;
-        }
-
-        .cuadritos {
-            text-align: center;
             margin: 0 auto;
         }
 
-            .cuadritos td {
-                padding: 30px;
-            }
+        #publicidad {
+            padding: 0;
+            padding-left: 1px;
+            height:543px;
+        }
+        #publicidad img{
+            height:543px;
+        }
+
+        #profes {
+            background-color: #ffffff;
+            border-radius: 10px;
+            text-align: center;
+            width: 580px;
+            margin-left: 1px;
+        }
+
+        .cuadritos td {
+            padding: 30px;
+        }
 
         #profes img {
             width: 300px;
-            height: 200px;
+            height: 150px;
         }
-        .clear{
-            clear:both;
-        }
-        
+
     </style>
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="Body" runat="server">
-    <article>
-
-        <div id="titulo">
-            <h1>Nuestros Docentes </h1>
+    <section class="container">
+        <div class="row" id="titulo">
+            <h1 class="text-center">Nuestros Docentes </h1>
         </div>
+        <div class="row">
+            <div id="destacado" class="col-md-4">
+                <div id="subdestacado">
+                    <h2 class="text-center">Mejor Profe del ciclo</h2>
+                    <a href="Profesor.aspx">
+                        <img src="Imagenes/Profesores/destacado.jpg" class="img-rounded img-responsive" /></a>
+                    <p class="text-center">El mejor profesor del curso de Lenguaje 2 :D</p>
+                </div>
 
-        <div class="profesores">
-            <div id="destacado">
-                <h2>Mejor Profe del ciclo</h2>
-                <a href="Profesor.aspx"><img src="Imagenes/Profesores/destacado.jpg" /></a>
-                <p>El mejor profesor del curso de Lenguaje 2 :D</p>
             </div>
-            <div id="publicidad">
-                <img src="Imagenes/publicidad2.jpg" height="645" width="180" />
-            </div>
-            <div id="profes">
-                <h2>Matematica para virgenieros</h2>
+            <div id="profes" class="col-md-6">
+                <h2 class="text-center">Matematica para virgenieros</h2>
                 <asp:DataList ID="profesores" CssClass="cuadritos" RepeatColumns="2" runat="server" DataSourceID="XmlDataSource1">
                     <ItemTemplate>
                         <div>
-                            <img src="<%#XPath("imagen") %>" />
-                            <p><%#XPath("Nombre") %></p>
+                            <img src="<%#XPath("imagen") %>" class="img-rounded img-responsive" />
+                            <p class="text-center"><%#XPath("Nombre") %></p>
                         </div>
                     </ItemTemplate>
                 </asp:DataList>
                 <asp:XmlDataSource runat="server" ID="XmlDataSource1" DataFile="~/App_Data/Profesores.xml"></asp:XmlDataSource>
             </div>
+            <div id="publicidad" class="col-md-2">
+                <img src="Imagenes/publicidad2.jpg" class="img-rounded img-responsive" />
+            </div>
             <div class="clear">
-
             </div>
         </div>
-    </article>
+    </section>
 
 </asp:Content>

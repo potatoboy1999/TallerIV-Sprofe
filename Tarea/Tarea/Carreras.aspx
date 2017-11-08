@@ -54,6 +54,7 @@
                 <label>Carrera: </label>
                 <br />
                 <asp:DropDownList ID="DropDownList1" runat="server" Height="40px" Width="394px">
+                    <asp:ListItem>Seleccione Carrera</asp:ListItem>
                     <asp:ListItem>Arquitectura</asp:ListItem>
                     <asp:ListItem>Comunicaciones</asp:ListItem>
                     <asp:ListItem>Gastronomia</asp:ListItem>
@@ -67,6 +68,7 @@
                 <br />
                 <label>Curso:</label><br />
                 <asp:DropDownList ID="DropDownList2" runat="server" Height="40px" Width="394px">
+                    <asp:ListItem>Seleccione Curso</asp:ListItem>
                     <asp:ListItem>Fisica I</asp:ListItem>
                     <asp:ListItem>Fisica II</asp:ListItem>
                     <asp:ListItem>Taller de Software I</asp:ListItem>
