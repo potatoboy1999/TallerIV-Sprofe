@@ -90,7 +90,7 @@
                     <div class="col-md-8">
                         <h1 id="info">Información General</h1>
                         <p><span>Curso: </span>Entrenamiento Rítmico y Auditivo I</p><br/>
-                        <p><span>% de aceptación: </span>85%</p><br/>
+                        <p><span>% de aceptación: </span>77.5%</p><br/>
                         <p><span>% de aprobados por ciclo: </span>80%</p><br/>
                         <p><span>Años de experiencia: </span>6 años</p><br/>
                         <div class="boton">
