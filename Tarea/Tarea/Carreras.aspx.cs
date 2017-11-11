@@ -18,5 +18,15 @@ namespace Tarea
         {
             Response.Redirect("Profesores.aspx");
         }
+
+        protected void ddlCarreras_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            sdsCursos.SelectCommand = "SELECT cursos.nombre " +
+                "FROM cursooncarrera " +
+                "INNER JOIN carreras ON carreras.idcarrera = cursooncarrera.idcarrera " +
+                "INNER JOIN cursos ON cursooncarrera.idcurso = cursos.idcurso " +
+                "WHERE (carreras.nombrecarrera = '"+ ddlCarreras.SelectedValue +"')";
+            sdsCursos.DataBind();
+        }
     }
 }

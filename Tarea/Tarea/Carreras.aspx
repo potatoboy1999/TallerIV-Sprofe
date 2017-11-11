@@ -53,31 +53,21 @@
             <section id="form">
                 <label>Carrera: </label>
                 <br />
-                <asp:DropDownList ID="DropDownList1" runat="server" Height="40px" Width="394px">
-                    <asp:ListItem>Seleccione Carrera</asp:ListItem>
-                    <asp:ListItem>Arquitectura</asp:ListItem>
-                    <asp:ListItem>Comunicaciones</asp:ListItem>
-                    <asp:ListItem>Gastronomia</asp:ListItem>
-                    <asp:ListItem>Ingenieria Informatica y de Sistemas</asp:ListItem>
-                    <asp:ListItem>Ingenieria Ambiental</asp:ListItem>
-                    <asp:ListItem>Ingenieria Civil</asp:ListItem>
-                    <asp:ListItem>Ingenieria Industrial</asp:ListItem>
-                    <asp:ListItem>Psicologia</asp:ListItem>
-                </asp:DropDownList>
+
+                <asp:DropDownList ID="ddlCarreras" runat="server" AutoPostBack="True"  DataSourceID="sdsCarreras" DataTextField="nombrecarrera" DataValueField="nombrecarrera" OnSelectedIndexChanged="ddlCarreras_SelectedIndexChanged"></asp:DropDownList>
+                <asp:SqlDataSource runat="server" ID="sdsCarreras" ConnectionString='<%$ ConnectionStrings:ConeccionSprofe %>' SelectCommand="SELECT [nombrecarrera] FROM [carreras] ORDER BY [nombrecarrera]"></asp:SqlDataSource>
+
                 <br />
                 <br />
+
                 <label>Curso:</label><br />
-                <asp:DropDownList ID="DropDownList2" runat="server" Height="40px" Width="394px">
-                    <asp:ListItem>Seleccione Curso</asp:ListItem>
-                    <asp:ListItem>Fisica I</asp:ListItem>
-                    <asp:ListItem>Fisica II</asp:ListItem>
-                    <asp:ListItem>Taller de Software I</asp:ListItem>
-                    <asp:ListItem>Taller de Software II</asp:ListItem>
-                    <asp:ListItem>Taller de Software III</asp:ListItem>
-                    <asp:ListItem>Taller de Software IV</asp:ListItem>
-                    <asp:ListItem>Programacion orientada a objetos</asp:ListItem>
-                    <asp:ListItem>Analisis y diseño de base de datos</asp:ListItem>
-                </asp:DropDownList>
+
+                <asp:DropDownList ID="ddlCursos" runat="server" DataSourceID="sdsCursos" DataTextField="nombre" DataValueField="nombre"></asp:DropDownList>
+                <asp:SqlDataSource runat="server" ID="sdsCursos" ConnectionString='<%$ ConnectionStrings:ConeccionSprofe %>' SelectCommand="SELECT cursos.nombre FROM cursooncarrera INNER JOIN carreras ON carreras.idcarrera = cursooncarrera.idcarrera INNER JOIN cursos ON cursooncarrera.idcurso = cursos.idcurso WHERE (carreras.nombrecarrera = @nombrecarrera)">
+                    <SelectParameters>
+                        <asp:Parameter DefaultValue="comunicaciones" Name="nombrecarrera"></asp:Parameter>
+                    </SelectParameters>
+                </asp:SqlDataSource>
             </section>
             <asp:Button CssClass="btn btn-lg btn-primary" ID="Button1" runat="server" Text="A Buscar!" OnClick="Button1_Click" />
         </section>

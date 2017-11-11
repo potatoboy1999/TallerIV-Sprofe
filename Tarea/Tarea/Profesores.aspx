@@ -53,8 +53,8 @@
     </style>
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="Body" runat="server">
-    <section class="container">
-        <div class="row" id="titulo">
+    <section >
+        <div  id="titulo">
             <h1 class="text-center">Nuestros Docentes </h1>
         </div>
         <div class="row">
