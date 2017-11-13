@@ -31,7 +31,7 @@
 
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
     <div class="centroPag jumbotron" id="caja_registro">
-        <asp:CreateUserWizard ID="CreateUserWizard1" runat="server" ActiveStepIndex="0">
+        <asp:CreateUserWizard ID="CreateUserWizard1" runat="server" ActiveStepIndex="1">
             <WizardSteps>
                 <asp:CreateUserWizardStep ID="CreateUserWizardStep1" runat="server">
                     <ContentTemplate>
@@ -75,6 +75,21 @@
                 </asp:CreateUserWizardStep>
 
                 <asp:CompleteWizardStep ID="CompleteWizardStep1" runat="server">
+                    <ContentTemplate>
+                        <table>
+                            <tr>
+                                <td align="center" colspan="2"><h1>Felicitaciones</h1></td>
+                            </tr>
+                            <tr>
+                                <td class="logLabel">La cuenta se ha creado correctamente.</td>
+                            </tr>
+                            <tr>
+                                <td align="right" colspan="2">
+                                    <asp:Button runat="server" CausesValidation="False" CommandName="Continue" Text="Continuar" ValidationGroup="CreateUserWizard1" ID="ContinueButton"></asp:Button>
+                                </td>
+                            </tr>
+                        </table>
+                    </ContentTemplate>
                 </asp:CompleteWizardStep>
             </WizardSteps>
         </asp:CreateUserWizard>
