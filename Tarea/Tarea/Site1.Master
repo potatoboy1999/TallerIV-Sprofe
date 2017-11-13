@@ -17,6 +17,13 @@
         .navbar {
             margin-bottom: 0;
         }
+        #cerrarSesion a{
+            color: white;
+            text-decoration:none;
+        }
+        #headerBtns span{
+
+        }
 
         footer {
             background-color: #2d2d30;
@@ -56,10 +63,18 @@
               <a id="nav-logo" class="navbar-brand" href="Default.aspx"><img src="Imagenes/Logo.png" width="120" height="35" style="margin-top: -6px"></a>
             </div>
             <div id="navbar" class="navbar-collapse collapse">                
-                <div class="navbar-form navbar-right">
+                <div class="navbar-form navbar-right" id="headerBtns">
                     <button type="button" class="btn btn-default" onclick="location.href='Carreras.aspx';"><span class="glyphicon glyphicon-search"></span> Empieza tu búsqueda</button>
                     <button type="button" class="btn btn-default" onclick="location.href='Contactenos.aspx';"><span class="glyphicon glyphicon-envelope"></span> Contáctenos</button>
-                    <button type="button" class="btn btn-primary" onclick="location.href='Ingresar/LogIn.aspx';"><span class="glyphicon glyphicon-user"></span> Ingresa!</button>
+                    <asp:LoginView ID="lvLogin" runat="server">
+                        <AnonymousTemplate>
+                            <asp:Button CssClass="btn btn-primary" ID="btnLogIn" runat="server" Text="Ingresa!" OnClick="btnLogIn_Click" />
+                        </AnonymousTemplate>
+                        <LoggedInTemplate>
+                            <asp:Button CssClass="btn btn-danger" ID="btnLogOut" runat="server" Text="Cerrar Sesión" OnClick="btnLogOut_Click" />
+                        </LoggedInTemplate>
+                    </asp:LoginView>
+                    <asp:LoginName ID="UserName" runat="server" />
                 </div>
             </div>
           </div>
