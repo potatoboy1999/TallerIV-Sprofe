@@ -18,5 +18,10 @@ namespace Tarea
         {
             Response.Redirect("RegistroExitoso.aspx");
         }
+
+        protected void CreateUserWizard1_ContinueButtonClick(object sender, EventArgs e)
+        {
+            Response.Redirect("Carreras.aspx");
+        }
     }
 }
