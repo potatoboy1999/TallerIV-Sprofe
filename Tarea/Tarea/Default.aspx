@@ -85,14 +85,6 @@
             </div>
                 </div>
         </div>
-    </div>
-
-    <div class="container ">
-        <div id="auspiciador" class="jumbotron text-center" style="padding:0 4px 3px 4px; height:auto;">
-            <h2>Auspiciadores: </h2>
-            <asp:AdRotator ID="AdRotator1" CssClass="img-responsive" runat="server" DataSourceID="XmlDataSource1" />
-            <asp:XmlDataSource runat="server" ID="XmlDataSource1" DataFile="~/App_Data/XMLFile1.xml"></asp:XmlDataSource>
-        </div>        
-    </div> 
+    </div>    
 </asp:Content>
 
