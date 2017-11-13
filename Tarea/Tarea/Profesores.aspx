@@ -26,19 +26,16 @@
 
         #publicidad {
             padding: 0;
-            padding-left: 1px;
             height:543px;
         }
         #publicidad img{
-            height:543px;
+            height:100%;
         }
 
         #profes {
             background-color: #ffffff;
             border-radius: 10px;
             text-align: center;
-            width: 580px;
-            margin-left: 1px;
         }
 
         .cuadritos td {
@@ -53,8 +50,8 @@
     </style>
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="Body" runat="server">
-    <section >
-        <div  id="titulo">
+    <section class="container">
+        <div class="row" id="titulo">
             <h1 class="text-center">Nuestros Docentes </h1>
         </div>
         <div class="row">
