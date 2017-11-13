@@ -124,7 +124,6 @@
     </None>
   </ItemGroup>
   <ItemGroup>
-    <Content Include="App_Data\XMLFile1.xml" />
     <Content Include="Default.aspx" />
     <Content Include="Global.asax" />
     <Content Include="Carreras.aspx" />

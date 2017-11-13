@@ -57,7 +57,7 @@
         <div class="row">
                 <div class="col-md-6">
                     <div class="jumbotron contacto">
-                        <h1 class="text-center titulo">¿Qué podemos mejorar?</h1>
+                        <h1 class="text-center titulo">Ayúdanos a mejorar !!</h1>
                          <asp:TextBox ID="TextBox6" runat="server" placeholder="Nombre" Width="90%" CssClass="input"></asp:TextBox>
                         <br />
                         <br />
@@ -70,7 +70,7 @@
                 </div>
                 <div class="col-md-6">
                     <div class="jumbotron contacto tamaño">
-                        <h1 class="text-center titulo">¿Tienes algo que decirnos?</h1>
+                        <h1 class="text-center titulo">Comunícate con nosotros </h1>
                         <p><span class="glyphicon glyphicon-earphone"></span> <span>555-5555</span></p>                    
                         <p><span class="glyphicon glyphicon-envelope"></span> <span>elgabo@gmail.com</span></p>
                         <p><img src="https://user-images.githubusercontent.com/11203357/29274582-4be0c7e2-8100-11e7-83c8-0435aee88626.png" width="21" height="21"/> <i>S</i>profe</p>
