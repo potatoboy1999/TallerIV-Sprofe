@@ -1,7 +1,72 @@
-﻿.error {
-	color: red;
+﻿#HeaderLogIn {
+    background-color: rgba(0, 36, 65, 0.58);
+    border: none;
 }
 
 #block {
-	margin: auto;
+    margin: auto;
 }
+
+
+table h1 {
+    text-align: center;
+    padding: 10px 0 20px 0;
+    border-bottom: 1px solid black;
+    margin-bottom: 25px;
+}
+
+table {
+    width: 100%;
+}
+
+    table td {
+        padding: 10px 5px;
+    }
+
+.row {
+    text-align: center;
+    margin-bottom: 15px;
+}
+
+.logLabel {
+    font-size: 18px;
+}
+
+.logError {
+    color: red;
+    font-size: 13px;
+}
+
+#logCheck {
+    padding: 15px 50px;
+    text-align: center;
+}
+
+#logBtns {
+    padding: 0 5%;
+    text-align:center;
+}
+
+.logInput {
+    width: 62%;
+}
+
+#logLeft {
+    float: left;
+    width: 40%;
+}
+
+    #logLeft .row {
+        text-align: right;
+    }
+
+#logRight {
+    margin-left: 50%;
+    text-align: left;
+}
+
+    #logRight .row {
+        text-align: left;
+        height: 26px;
+        margin-bottom: 20px;
+    }
