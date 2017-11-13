@@ -12,20 +12,11 @@ namespace Tarea
         protected void Page_Load(object sender, EventArgs e)
         {
 
-<<<<<<< HEAD
-        }        
-=======
-        }
-
-        protected void Button1_Click(object sender, EventArgs e)
-        {
-            Response.Redirect("RegistroExitoso.aspx");
-        }
+        }                
 
         protected void CreateUserWizard1_ContinueButtonClick(object sender, EventArgs e)
         {
             Response.Redirect("Carreras.aspx");
         }
->>>>>>> b4c0b0de0a543fa4aeaf7c7276f10164ec9f88e3
     }
 }

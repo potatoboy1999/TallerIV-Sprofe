@@ -8,9 +8,7 @@ using System.Web.UI.WebControls;
 namespace Tarea
 {
     public partial class startSearch : System.Web.UI.Page
-    {
-        private string codigocurso;
-
+    {        
         protected void Page_Load(object sender, EventArgs e)
         {
 

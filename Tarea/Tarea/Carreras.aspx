@@ -74,7 +74,7 @@
                 <div class="row">
 
                     <h2>Curso:</h2>
-                    <asp:DropDownList ID="ddlCursos" runat="server" DataSourceID="sdsCursos" DataTextField="nombre" DataValueField="idcurso" OnSelectedIndexChanged="ddlCursos_SelectedIndexChanged"></asp:DropDownList>
+                    <asp:DropDownList ID="ddlCursos" runat="server" DataSourceID="sdsCursos" DataTextField="nombre" DataValueField="idcurso"></asp:DropDownList>
 
                     <asp:SqlDataSource runat="server" ID="sdsCursos" ConnectionString='<%$ ConnectionStrings:ConeccionSprofe %>' SelectCommand="SELECT cursos.nombre, cursos.idcurso FROM cursooncarrera INNER JOIN carreras ON carreras.idcarrera = cursooncarrera.idcarrera INNER JOIN cursos ON cursooncarrera.idcurso = cursos.idcurso WHERE (carreras.nombrecarrera = @nombrecarrera)">
                         <SelectParameters>
