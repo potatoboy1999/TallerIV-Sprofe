@@ -2,6 +2,12 @@
 
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
     <style>
+        .container{
+            width:100%;
+        }
+        #descripcion{
+            margin-left:6%;
+        }
         #titulo {
             background-color: black;
             padding: 10px;
@@ -10,32 +16,40 @@
 
         .row {
             color: #48494f;
+            margin:0;
+            
         }
 
         #destacado {
             background-color: white;
             border-radius: 15px;
+            width:30%;
+            margin-right:1%;
         }
 
 
-        #destacado img {
-            width: 300px;
-            height: 200px;
-            margin: 0 auto;
-        }
+            #destacado img {
+                width: 300px;
+                height: 200px;
+                margin: 0 auto;
+            }
 
         #publicidad {
             padding: 0;
-            height:543px;
+            height: 543px;
+            width:12%;
+            margin-left:1%;
         }
-        #publicidad img{
-            height:100%;
-        }
+
+            #publicidad img {
+                height: 100%;
+            }
 
         #profes {
             background-color: #ffffff;
             border-radius: 10px;
             text-align: center;
+            width:50%
         }
 
         .cuadritos td {
@@ -46,15 +60,14 @@
             width: 300px;
             height: 150px;
         }
-
     </style>
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="Body" runat="server">
+    <div class="row" id="titulo">
+        <h1 class="text-center">Nuestros Docentes </h1>
+    </div>
     <section class="container">
-        <div class="row" id="titulo">
-            <h1 class="text-center">Nuestros Docentes </h1>
-        </div>
-        <div class="row">
+        <div id="descripcion" class="row">
             <div id="destacado" class="col-md-4">
                 <div id="subdestacado">
                     <h2 class="text-center">Mejor Profe del ciclo</h2>
