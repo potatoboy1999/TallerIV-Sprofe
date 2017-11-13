@@ -127,7 +127,9 @@
     <Content Include="Default.aspx" />
     <Content Include="Global.asax" />
     <Content Include="Carreras.aspx" />
-    <Content Include="Web.config" />
+    <Content Include="Web.config">
+      <SubType>Designer</SubType>
+    </Content>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Contactenos.aspx.cs">
@@ -170,12 +172,14 @@
     </Compile>
     <Compile Include="Profesor.aspx.cs">
       <DependentUpon>Profesor.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="Profesor.aspx.designer.cs">
       <DependentUpon>Profesor.aspx</DependentUpon>
     </Compile>
     <Compile Include="Profesores.aspx.cs">
       <DependentUpon>Profesores.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="Profesores.aspx.designer.cs">
       <DependentUpon>Profesores.aspx</DependentUpon>
@@ -204,6 +208,7 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
+    <Folder Include="Contenido\" />
     <Folder Include="Models\" />
   </ItemGroup>
   <PropertyGroup>

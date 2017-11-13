@@ -1,47 +1,6 @@
 ﻿<%@ Page UnobtrusiveValidationMode="None" Title="" Language="C#" MasterPageFile="Log.master" AutoEventWireup="true" CodeBehind="LogIn.aspx.cs" Inherits="Tarea.LogIn" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
-    <link href="Estilo/LogIn_Style.css" rel="stylesheet" />
-    <style>
-        table h1 {
-            text-align: center;
-            padding: 10px 0 20px 0 ;
-            border-bottom: 1px solid black;
-            margin-bottom : 25px;
-        }
-
-        table {
-            width: 100%;
-        }
-
-            table td {
-                padding: 10px 5px;
-            }
-
-        .row {
-            text-align: center;
-            margin-bottom: 15px;
-        }
-
-        .logLabel {
-            font-size: 18px;
-        }
-
-        .logError {
-            color: red;
-            font-size: 13px;
-        }
-
-        #logCheck {
-            padding: 15px 50px;
-        }
-        #logBtns{
-            padding: 0 5%;
-        }
-        .logInput{
-            width: 62%;
-        }
-    </style>
 </asp:Content>
 
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
