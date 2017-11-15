@@ -16,7 +16,7 @@ namespace Tarea
 
         protected void CreateUserWizard1_ContinueButtonClick1(object sender, EventArgs e)
         {
-            Response.Redirect("Carreras.aspx");
+            Response.Redirect("../Carreras.aspx");
         }
     }
 }
