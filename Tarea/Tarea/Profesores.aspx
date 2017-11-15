@@ -44,10 +44,6 @@
             padding: 30px;
         }
 
-        #profes img {
-            width: 300px;
-            height: 150px;
-        }
 
         #imgmejorprofe {
             margin: 0 auto;
@@ -64,12 +60,12 @@
                 <div id="destacado" class="text-center">
                     <asp:FormView Width="100%" ID="FormView1" runat="server" DataSourceID="sdsMejorProfe" DataKeyNames="idprofesor">
                         <ItemTemplate>
-                            <h2>
-                                <asp:Label Text='<%# Bind("nombre") %>' runat="server" ID="nombreLabel" />
-                                <asp:Label Text='<%# Bind("apellido_paterno") %>' runat="server" ID="apellido_paternoLabel" /></h2>
+                            <h2>Besto profe ever</h2>
+                                <asp:Label Text='<%# Eval("nombre") %>' runat="server" ID="nombreLabel" />
+                                <asp:Label Text='<%# Eval("apellido_paterno") %>' runat="server" ID="apellido_paternoLabel" /></h2>
                             <img id="imgmejorprofe" src="<%# Eval("imagen") %>" class="img-responsive" />
-                            <asp:Label Text='<%# Bind("descripcion") %>' runat="server" ID="descripcionLabel" /><br />
-                            <asp:Label Text='<%# Bind("puntuaje") %>' runat="server" ID="puntuajeLabel" /><br />
+                            <asp:Label Text='<%# Eval("descripcion") %>' runat="server" ID="descripcionLabel" /><br />
+                            <asp:Label Text='<%# Eval("puntuaje") %>' runat="server" ID="puntuajeLabel" /><br />
                         </ItemTemplate>
                     </asp:FormView>
                     <asp:SqlDataSource runat="server" ID="sdsMejorProfe" ConnectionString='<%$ ConnectionStrings:ConeccionSprofe %>' SelectCommand="SELECT TOP (1) profesores.nombre, profesores.apellido_paterno, profesores.descripcion, profesores.imagen, profesores.puntuaje, profesores.idprofesor FROM profeoncursos INNER JOIN profesores ON profeoncursos.idprofesor = profesores.idprofesor WHERE (profeoncursos.idcurso = @idcurso) ORDER BY profesores.puntuaje DESC">
@@ -81,15 +77,15 @@
             </div>
 
             <div class="col-md-8">
-
-                <asp:DataList ID="DataList1" Width="100%" RepeatColumns="2" runat="server" DataKeyField="idprofesor" DataSourceID="sdsProfes">
+                <h2 class="text-center">Bestos profes</h2>
+                <asp:DataList ID="DataList1" RepeatColumns="2" runat="server" DataKeyField="idprofesor" DataSourceID="sdsProfes">
                     <ItemTemplate>
                         <div class="text-center" id="destacado">
-                            <h2>
-                            <asp:Label Text='<%# Bind("nombre") %>' runat="server" ID="nombreLabel" />
-                            <asp:Label Text='<%# Bind("apellido_paterno") %>' runat="server" ID="apellido_paternoLabel" /></h2>
+
+                            <asp:Label Text='<%# Eval("nombre") %>' runat="server" ID="nombreLabel" />
+                            <asp:Label Text='<%# Eval("apellido_paterno") %>' runat="server" ID="apellido_paternoLabel" /></h2>
                         <img id="imgmejorprofe" src="<%# Eval("imagen") %>" class="img-responsive" width="300" height="300" />                        
-                        <asp:Label Text='<%# Bind("puntuaje") %>' runat="server" ID="puntuajeLabel" /><br />
+                        <asp:Label Text='<%# Eval("puntuaje") %>' runat="server" ID="puntuajeLabel" /><br />
                         </div>                        
                     </ItemTemplate>
                 </asp:DataList>
