@@ -21,7 +21,7 @@ namespace Tarea
 
         protected void ddlCarreras_SelectedIndexChanged(object sender, EventArgs e)
         {
-            sdsCursos.SelectCommand = "SELECT cursos.nombre " +
+            sdsCursos.SelectCommand = "SELECT cursos.nombre, cursos.idcurso " +
                 "FROM cursooncarrera " +
                 "INNER JOIN carreras ON carreras.idcarrera = cursooncarrera.idcarrera " +
                 "INNER JOIN cursos ON cursooncarrera.idcurso = cursos.idcurso " +
