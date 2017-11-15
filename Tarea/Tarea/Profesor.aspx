@@ -57,6 +57,21 @@
             font-weight:normal;
             margin-left:1%;
         }
+        li {
+            animation-duration: 3s;
+            animation-name: slidein;
+            font-size:medium;
+        }
+        @keyframes slidein {
+  from {
+    margin-top: 100%;
+    width: 300%
+  }
+
+  to {
+    margin-bottom: 0%;
+    width: 100%;
+  }
     </style>
 </asp:Content>
 
