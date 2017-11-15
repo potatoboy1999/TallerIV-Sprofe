@@ -31,11 +31,9 @@
 
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
     <div class="centroPag jumbotron" id="caja_registro">
-<<<<<<< HEAD
-        <asp:CreateUserWizard ID="CreateUserWizard1" runat="server" ActiveStepIndex="0">
-=======
-        <asp:CreateUserWizard ID="CreateUserWizard1" runat="server" OnContinueButtonClick="CreateUserWizard1_ContinueButtonClick">
->>>>>>> b4c0b0de0a543fa4aeaf7c7276f10164ec9f88e3
+
+        <asp:CreateUserWizard ID="CreateUserWizard1" runat="server" ActiveStepIndex="0" OnContinueButtonClick="CreateUserWizard1_ContinueButtonClick1">    
+
             <WizardSteps>
                 <asp:CreateUserWizardStep ID="CreateUserWizardStep1" runat="server">
                     <ContentTemplate>

@@ -12,9 +12,9 @@ namespace Tarea
         protected void Page_Load(object sender, EventArgs e)
         {
 
-        }                
+        }                       
 
-        protected void CreateUserWizard1_ContinueButtonClick(object sender, EventArgs e)
+        protected void CreateUserWizard1_ContinueButtonClick1(object sender, EventArgs e)
         {
             Response.Redirect("Carreras.aspx");
         }
