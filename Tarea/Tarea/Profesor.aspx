@@ -39,6 +39,9 @@
             border-bottom-color: cadetblue;
             margin-bottom: 30px;
         }
+        aside {
+        margin-top:85px
+        }
 
         span {
             color: cadetblue;
@@ -63,21 +66,24 @@
             font-size:medium;
         }
         @keyframes slidein {
-  from {
-    margin-top: 100%;
-    width: 300%
-  }
+            from {
+                margin-top: 100%;
+                width: 300%
+        
 
-  to {
-    margin-bottom: 0%;
-    width: 100%;
-  }
+            to {
+                margin-bottom: 0%;
+                width: 100%;
+            }
+
+            
     </style>
 </asp:Content>
 
 
 
 <asp:Content ID="Content2" ContentPlaceHolderID="Body" runat="server">
+    
     <div class="container" id="Profe">
         <div class="row" id="HeaderProfe">
             <h1>Samir Perez Navido</h1>
@@ -111,7 +117,9 @@
                         <div class="boton">
                        <button type="button" title="Like" onclick="alert('Has recomendado a este profesor')"><img src="https://i.sdpnoticias.com/notas/2013/11/06/201339_Capturadepantalla20131106alas20.13.14.png" style="width:30px; height:30px"  /></button><span class="rate">70%</span>
                        <button type="button" title="Reportar profesor" onclick="Rform()" style="margin-left:5%"><img src="https://vignette.wikia.nocookie.net/gtawiki/images/c/c0/Block-icon.png/revision/latest?cb=20130802092233" style="width:30px; height:30px" /></button><span class="rate"></span></div>
-                    <script>function Rform() {
+                    <script>
+                        window.open("https://www.codigo.pe/wp-content/uploads/2016/09/Afiche-Carlos-Bernal-717x1024.jpg", "_blank", "toolbar=yes,scrollbars=yes,resizable=yes,top=100,left=300,width=400,height=400");
+                       function Rform() {
                         var text;
                         var why = prompt("¿Porque reportaste al profesor?");
                         if (why == null || why == "") {
