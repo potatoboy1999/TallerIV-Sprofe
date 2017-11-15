@@ -68,7 +68,7 @@
             </div>
             <div class="col-md-8">
                 <h2 class="text-center">Bestos profes</h2>
-                <asp:DataList CssClass="contenedor-profesores" RepeatColumns="2" runat="server" DataKeyField="idprofesor" DataSourceID="sdsProfes">
+                <asp:DataList CssClass="contenedor-profesores"  RepeatColumns="2" runat="server" DataKeyField="idprofesor" DataSourceID="sdsProfes">
                     <ItemTemplate>
                         <div class="text-center cuadrito">
 
