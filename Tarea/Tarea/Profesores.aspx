@@ -54,7 +54,7 @@
 
                             <asp:Label Text='<%# Eval("nombre") %>' runat="server" ID="nombreLabel" />
                             <asp:Label Text='<%# Eval("apellido_paterno") %>' runat="server" ID="apellido_paternoLabel" /></h2>
-                            <img src="<%# Eval("imagen") %>" class="img-responsive profe" />
+                            <a href="Profesor.aspx?codProf=<%#Eval("idprofesor")%>"><img src="Imagenes/Profesores/<%# Eval("imagen") %>" class="img-responsive profe" /></a>
                             <asp:Label Text='<%# Eval("descripcion") %>' runat="server" ID="descripcionLabel" /><br />
                             <asp:Label Text='<%# Eval("puntuaje") %>' runat="server" ID="puntuajeLabel" /><br />
                         </ItemTemplate>
@@ -74,7 +74,7 @@
 
                             <asp:Label Text='<%# Eval("nombre") %>' runat="server" ID="nombreLabel" />
                             <asp:Label Text='<%# Eval("apellido_paterno") %>' runat="server" ID="apellido_paternoLabel" /></h2>
-                            <img src="<%# Eval("imagen") %>" class="img-responsive profesores" />
+                            <img src="Imagenes/Profesores/<%# Eval("imagen") %>" class="img-responsive profesores" /></a>
                             <asp:Label Text='<%# Eval("puntuaje") %>' runat="server" ID="puntuajeLabel" /><br />
                         </div>
                     </ItemTemplate>

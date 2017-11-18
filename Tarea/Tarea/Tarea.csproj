@@ -81,16 +81,15 @@
     <Content Include="Estilo\StyleSheet.css" />
     <Content Include="Estilo\StyleSheet2.css" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
-    <Content Include="Imagenes\courses.png" />
     <Content Include="Imagenes\Descubre.png" />
     <Content Include="Imagenes\estudios.jpg" />
     <Content Include="Imagenes\Fondo.jpg" />
-    <Content Include="Imagenes\ArrowRight.png" />
     <Content Include="Imagenes\Icon.png" />
     <Content Include="Imagenes\Logo.png" />
     <Content Include="Imagenes\Logo_usil.png" />
     <Content Include="Imagenes\Opina.png" />
     <Content Include="Imagenes\profe.PNG" />
+    <Content Include="Imagenes\Profesores\default.jpg" />
     <Content Include="Imagenes\Profesores\destacado.jpg" />
     <Content Include="Imagenes\Profesores\profe1.jpg" />
     <Content Include="Imagenes\Profesores\profe2.jpg" />
