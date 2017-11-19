@@ -56,10 +56,10 @@
                             <asp:Label Text='<%# Eval("apellido_paterno") %>' runat="server" ID="apellido_paternoLabel" /></h2>
                             <a href="Profesor.aspx?codProf=<%#Eval("idprofesor")%>"><img src="Imagenes/Profesores/<%# Eval("imagen") %>" class="img-responsive profe" /></a>
                             <asp:Label Text='<%# Eval("descripcion") %>' runat="server" ID="descripcionLabel" /><br />
-                            <asp:Label Text='<%# Eval("puntuaje") %>' runat="server" ID="puntuajeLabel" /><br />
+                            <asp:Label Text='<%# Eval("puntaje") %>' runat="server" ID="puntajeLabel" /><br />
                         </ItemTemplate>
                     </asp:FormView>
-                    <asp:SqlDataSource runat="server" ID="sdsMejorProfe" ConnectionString='<%$ ConnectionStrings:ConeccionSprofe %>' SelectCommand="SELECT TOP (1) profesores.nombre, profesores.apellido_paterno, profesores.descripcion, profesores.imagen, profesores.puntuaje, profesores.idprofesor FROM profeoncursos INNER JOIN profesores ON profeoncursos.idprofesor = profesores.idprofesor WHERE (profeoncursos.idcurso = @idcurso) ORDER BY profesores.puntuaje DESC">
+                    <asp:SqlDataSource runat="server" ID="sdsMejorProfe" ConnectionString='<%$ ConnectionStrings:ConeccionSprofe %>' SelectCommand="SELECT TOP (1) profesores.nombre, profesores.apellido_paterno, profesores.descripcion, profesores.imagen, profesores.puntaje, profesores.idprofesor FROM profeoncursos INNER JOIN profesores ON profeoncursos.idprofesor = profesores.idprofesor WHERE (profeoncursos.idcurso = @idcurso) ORDER BY profesores.puntaje DESC">
                         <SelectParameters>
                             <asp:QueryStringParameter QueryStringField="codigocurso" Name="idcurso"></asp:QueryStringParameter>
                         </SelectParameters>
@@ -74,13 +74,13 @@
 
                             <asp:Label Text='<%# Eval("nombre") %>' runat="server" ID="nombreLabel" />
                             <asp:Label Text='<%# Eval("apellido_paterno") %>' runat="server" ID="apellido_paternoLabel" /></h2>
-                            <img src="Imagenes/Profesores/<%# Eval("imagen") %>" class="img-responsive profesores" /></a>
-                            <asp:Label Text='<%# Eval("puntuaje") %>' runat="server" ID="puntuajeLabel" /><br />
+                            <a href="Profesor.aspx?codProf=<%#Eval("idprofesor")%>"><img src="Imagenes/Profesores/<%# Eval("imagen") %>" class="img-responsive profesores" /></a>
+                            <asp:Label Text='<%# Eval("puntaje") %>' runat="server" ID="puntajeLabel" /><br />
                         </div>
                     </ItemTemplate>
                 </asp:DataList>
 
-                <asp:SqlDataSource runat="server" ID="sdsProfes" ConnectionString='<%$ ConnectionStrings:ConeccionSprofe %>' SelectCommand="SELECT profesores.nombre, profesores.apellido_paterno, profesores.descripcion, profesores.imagen, profesores.puntuaje, profesores.idprofesor FROM profeoncursos INNER JOIN profesores ON profeoncursos.idprofesor = profesores.idprofesor WHERE (profeoncursos.idcurso = @idcurso)  ORDER BY profesores.puntuaje DESC">
+                <asp:SqlDataSource runat="server" ID="sdsProfes" ConnectionString='<%$ ConnectionStrings:ConeccionSprofe %>' SelectCommand="SELECT profesores.nombre, profesores.apellido_paterno, profesores.descripcion, profesores.imagen, profesores.puntaje, profesores.idprofesor FROM profeoncursos INNER JOIN profesores ON profeoncursos.idprofesor = profesores.idprofesor WHERE (profeoncursos.idcurso = @idcurso)  ORDER BY profesores.puntaje DESC">
                     <SelectParameters>
                         <asp:QueryStringParameter QueryStringField="codigocurso" Name="idcurso"></asp:QueryStringParameter>
                     </SelectParameters>
