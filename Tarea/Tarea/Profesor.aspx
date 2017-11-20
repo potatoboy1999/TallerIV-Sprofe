@@ -29,7 +29,7 @@
             border-top-right-radius: 10px;
         }
 
-        #info {
+        .info {
             border-bottom: solid;
             border-bottom-color: cadetblue;
             margin-bottom: 30px;
@@ -79,6 +79,14 @@
                 width: 100%;
             }
         }
+
+        .comentario1{
+            padding: 10px;
+            padding-left: 0;
+        }
+        #paddingalinear{
+            padding:0;
+        }
     </style>
 </asp:Content>
 
@@ -116,8 +124,8 @@
                     </div>
                     <div class="col-md-8">
                         <div class="row" style="height: 360px;">
-                            <div class="col-md-8">
-                                <h1 id="info">Información General</h1>
+                            <div class="col-md-8" id="paddingalinear">
+                                <h1 class="info">Información General</h1>
                                 <p><span>Curso:</span></p>
                                 <ul>
                                     <asp:Repeater ID="rCursos" runat="server" DataSourceID="sdsCursos">
@@ -146,49 +154,54 @@
 
                             </div>
                         </div>
+                        
                         <div class="row">
+                            <div class="col-md-8" id="paddingalinear">
+                                <h1 class="info" id="comentarios">Comentarios:</h1>
+                                <%--<p><span>El 85% de los comentarios son positivos</span></p>--%>
+                                <asp:Label ID="lblComentarios" runat="server" Text="Ingrese su comentario:"></asp:Label><br />
+                                <asp:FormView ID="fvComentarios" DefaultMode="Insert" runat="server" DataKeyNames="idprofesor,idusuario" DataSourceID="sdsComentarios" OnItemInserted="fvComentarios_ItemInserted" OnItemInserting="fvComentarios_ItemInserting">
+                                    <InsertItemTemplate>
+                                        <div class="comentario1">
+                                            <p class="_comentario">Título:</p>                            
+                                            <asp:TextBox Text='<%# Bind("titulo") %>' runat="server" ID="tituloTextBox" CssClass="textcomentario"/>
+                                        </div>
+                                        <div class="comentario1">
+                                            <p class="_comentario">Comentario:</p>
+                                            <asp:TextBox Text='<%# Bind("comentario") %>' runat="server" ID="comentarioTextBox" CssClass="textcomentario"/>
+                                        </div>
+                                    
+                                        <div class="comentario1">
+                                            <p class="_comentario">Valoración:</p>
+                                            <asp:DropDownList ID="ddlValoracion" runat="server">
+                                                <asp:ListItem Selected="True" Value="Positivo" Text='Positivo'></asp:ListItem>
+                                                <asp:ListItem Value="Negativo" Text='Negativo'></asp:ListItem>
+                                            </asp:DropDownList>
+                                        </div>
+                                    
+
+                                        <asp:Button CssClass="btn btn-primary" runat="server" Text="Insertar" CommandName="Insert" ID="InsertButton" CausesValidation="True" />
+
+                                    </InsertItemTemplate>
+                                </asp:FormView>
 
 
-                            <h1 id="comentarios">Comentarios:</h1>
-                            <%--<p><span>El 85% de los comentarios son positivos</span></p>--%>
-                            <asp:Label ID="lblComentarios" runat="server" Text="Ingrese su comentario:"></asp:Label><br />
-                            <asp:FormView ID="fvComentarios" DefaultMode="Insert" runat="server" DataKeyNames="idprofesor,idusuario" DataSourceID="sdsComentarios" OnItemInserted="fvComentarios_ItemInserted" OnItemInserting="fvComentarios_ItemInserting">
-                                <InsertItemTemplate>
+                                <%--<h2>Comentario positivo más reciente:</h2>
+                                <div class="comentarios">
+                                    <h3>El profesor es divertido</h3>
+                                    <p>Si quieres divertirte y aprender yo recomiendo a este profe</p>
+                                </div>
 
-                                    Titulo:<br />
-                                    <asp:TextBox Text='<%# Bind("titulo") %>' runat="server" ID="tituloTextBox" /><br />
+                                <h2>Comentario negativo más reciente:</h2>
+                                <div class="comentarios">
+                                    <h3>No sabe enseñar</h3>
+                                    <p>Muchas veces no se le entiende cuando explica, al final tienes que estudiar por tu cuenta para entender los temas </p>
+                                </div>
 
-                                    Comentario:<br />
-                                    <asp:TextBox Text='<%# Bind("comentario") %>' runat="server" ID="comentarioTextBox" /><br />
-
-                                    Valoración:<br />
-
-                                    <asp:DropDownList ID="ddlValoracion" runat="server">
-                                        <asp:ListItem Selected="True" Value="Positivo" Text='Positivo'></asp:ListItem>
-                                        <asp:ListItem Value="Negativo" Text='Negativo'></asp:ListItem>
-                                    </asp:DropDownList>
-                                    <br />
-
-                                    <asp:Button CssClass="btn btn-primary" runat="server" Text="Insertar" CommandName="Insert" ID="InsertButton" CausesValidation="True" />
-
-                                </InsertItemTemplate>
-                            </asp:FormView>
-
-
-                            <%--<h2>Comentario positivo más reciente:</h2>
-                            <div class="comentarios">
-                                <h3>El profesor es divertido</h3>
-                                <p>Si quieres divertirte y aprender yo recomiendo a este profe</p>
+                                <a>Ver más comentarios</a>
+                                --%>
                             </div>
-
-                            <h2>Comentario negativo más reciente:</h2>
-                            <div class="comentarios">
-                                <h3>No sabe enseñar</h3>
-                                <p>Muchas veces no se le entiende cuando explica, al final tienes que estudiar por tu cuenta para entender los temas </p>
-                            </div>
-
-                            <a>Ver más comentarios</a>
-                            --%>
+                            
                         </div>
                     </div>
                 </div>
