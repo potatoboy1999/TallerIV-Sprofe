@@ -1,4 +1,4 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Site1.Master" AutoEventWireup="true" CodeBehind="Profesor.aspx.cs" Inherits="Tarea.Profesor" %>
+﻿<%@ Page Title="" UnobtrusiveValidationMode="none" Language="C#" MasterPageFile="~/Site1.Master" AutoEventWireup="true" CodeBehind="Profesor.aspx.cs" Inherits="Tarea.Profesor" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
     <style>
@@ -177,18 +177,26 @@
                                         <div class="comentario1">
                                             <p class="_comentario">Título:</p>
                                             <asp:TextBox Text='<%# Bind("titulo") %>' runat="server" ID="tituloTextBox" CssClass="textcomentario" />
+                                            <asp:RequiredFieldValidator ID="rfvTitulo" CssClass="error" runat="server" ErrorMessage="ErrorTitulo" ControlToValidate="tituloTextBox" Text="* Ingrese un Título"></asp:RequiredFieldValidator>
                                         </div>
                                         <div class="comentario1">
                                             <p class="_comentario">Comentario:</p>
                                             <asp:TextBox Text='<%# Bind("comentario") %>' runat="server" ID="comentarioTextBox" CssClass="textcomentario" TextMode="MultiLine" Rows="3" Width="500" />
+                                            <asp:RequiredFieldValidator ID="rfvComentario" CssClass="error" runat="server" ErrorMessage="ErrorComentario" ControlToValidate="comentarioTextBox" Text="* Ingrese su comentario"></asp:RequiredFieldValidator>
                                         </div>
 
                                         <div class="comentario1">
                                             <p class="_comentario">Valoración:</p>
-                                            <asp:DropDownList ID="ddlValoracion" runat="server">
+                                            <asp:RadioButtonList ID="rblValoracion" runat="server">
+                                                <asp:ListItem Value="Positiva" Text='Positiva'></asp:ListItem>
+                                                <asp:ListItem Value="Negativa" Text='Negativa'></asp:ListItem>
+                                            </asp:RadioButtonList>
+
+                                            <asp:RequiredFieldValidator ID="rfvValoracion" CssClass="error" runat="server" ErrorMessage="ErrorValoracion" ControlToValidate="rblValoracion" Text="* Ingrese su valoración"></asp:RequiredFieldValidator>
+                                            <%--<asp:DropDownList ID="ddlValoracion" runat="server">
                                                 <asp:ListItem Selected="True" Value="Positivo" Text='Positivo'></asp:ListItem>
                                                 <asp:ListItem Value="Negativo" Text='Negativo'></asp:ListItem>
-                                            </asp:DropDownList>
+                                            </asp:DropDownList>--%>
                                         </div>
 
 
@@ -257,7 +265,7 @@
             </UpdateParameters>
         </asp:SqlDataSource>
 
-        <asp:SqlDataSource runat="server" ID="sdsTitulos" ConnectionString='<%$ ConnectionStrings:ConeccionSprofe %>' SelectCommand="SELECT [titulo] FROM [Titulos] WHERE ([idprofesor] = @idprofesor)">
+        <asp:SqlDataSource runat="server" ID="sdsTitulos" ConnectionString='<%$ ConnectionStrings:ConeccionSprofe %>' SelectCommand="SELECT [titulo] FROM [Titulos] WHERE ([idprofesor] = @idprofesor) ORDER BY [titulo]">
             <SelectParameters>
                 <asp:QueryStringParameter QueryStringField="codProf" Name="idprofesor" Type="Int32"></asp:QueryStringParameter>
             </SelectParameters>

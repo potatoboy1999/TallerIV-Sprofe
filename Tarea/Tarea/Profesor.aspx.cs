@@ -26,8 +26,9 @@ namespace Tarea
 
             var idProfe = Convert.ToInt32(Request.QueryString["codProf"]);
             var usuario = Page.User.Identity.Name;
-            var val = "Positiva";
-
+            var fvComentario = (RadioButtonList)((FormView)sender).FindControl("rblValoracion");
+            var val = fvComentario.SelectedValue;
+            
             e.Values["idprofesor"] = idProfe;
             e.Values["usuarionombre"] = usuario;
             e.Values["valoracion"] = val;
