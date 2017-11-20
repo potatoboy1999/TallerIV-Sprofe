@@ -26,7 +26,7 @@ namespace Tarea
                 var btnnoli = (Button)(fvProfe.FindControl("btnNoLike"));
                 btnnoli.Visible = true;
                 var btnli = (Button)(fvProfe.FindControl("btnLike"));
-                btnnoli.Visible = false;
+                btnli.Visible = false;
             }
         }
 
