@@ -59,11 +59,9 @@
             border-bottom-color: cadetblue;
             border-width: 1px;
             padding: 5px;
-<<<<<<< HEAD
             margin-top: 10px;
             margin-bottom: 10px;
-=======
->>>>>>> 865ae358e7b3b181a640804435b049bbdb168645
+
         }
 
         .rate {
@@ -100,14 +98,14 @@
         .paddingalinear {
             padding: 0;
         }
-<<<<<<< HEAD
+
         .publirota img{
             margin:auto;
         }
         .relleno{
             min-height:20px;
-            border-bottom: 2px solid gray;
-=======
+            border-bottom: 2px solid cadetblue;
+         }
         .comentarios .leftCol{
             float:left;
             width:70px;
@@ -119,7 +117,6 @@
         #ads{
             padding: 10px 0;
             text-align:center;
->>>>>>> 865ae358e7b3b181a640804435b049bbdb168645
         }
     </style>
 </asp:Content>
@@ -194,10 +191,8 @@
                                         <div class="comentario1">
                                             <p class="_comentario">Título:</p>
                                             <asp:TextBox Text='<%# Bind("titulo") %>' runat="server" ID="tituloTextBox" CssClass="textcomentario" />
-<<<<<<< HEAD
-=======
                                             <asp:RequiredFieldValidator ID="rfvTitulo" CssClass="error" runat="server" ErrorMessage="ErrorTitulo" ControlToValidate="tituloTextBox" Text="* Ingrese un Título"></asp:RequiredFieldValidator>
->>>>>>> 865ae358e7b3b181a640804435b049bbdb168645
+
                                         </div>
                                         <div class="comentario1">
                                             <p class="_comentario">Comentario:</p>
@@ -232,10 +227,6 @@
 
             </ItemTemplate>
         </asp:FormView>
-<<<<<<< HEAD
-
-=======
->>>>>>> 865ae358e7b3b181a640804435b049bbdb168645
 
 
         <h2 class="info">Comentarios</h2>
@@ -260,18 +251,16 @@
             </ItemTemplate>
         </asp:Repeater>
 
-<<<<<<< HEAD
+
         <div class="publirota">
             <div class="relleno"></div>
             <br />
             <asp:AdRotator ID="AdRotator1" runat="server" DataSourceID="xmlPublicidad" CssClass="img-responsive" Width="800" Height="200"/>
         </div>
-        
-=======
-        <div id="ads">
+
+        <%--<div id="ads">
             <asp:AdRotator ID="AdRotator1" runat="server" DataSourceID="xmlPublicidad" />
-        </div>
->>>>>>> 865ae358e7b3b181a640804435b049bbdb168645
+        </div>--%>
 
         <asp:XmlDataSource runat="server" ID="xmlPublicidad" DataFile="~/App_Data/Publicherryxd.xml"></asp:XmlDataSource>
         <asp:SqlDataSource runat="server" ID="sdsComentarios" ConnectionString='<%$ ConnectionStrings:ConeccionSprofe %>' SelectCommand="SELECT * FROM [comentarios] WHERE ([idprofesor] = @idprofesor)" OnSelected="sdsComentarios_Selected" DeleteCommand="DELETE FROM [comentarios] WHERE [idcomentario] = @idcomentario" InsertCommand="INSERT INTO [comentarios] ([idprofesor], [usuarionombre], [titulo], [comentario], [valoracion]) VALUES (@idprofesor, @usuarionombre, @titulo, @comentario, @valoracion)" UpdateCommand="UPDATE [comentarios] SET [idprofesor] = @idprofesor, [usuarionombre] = @usuarionombre, [titulo] = @titulo, [comentario] = @comentario, [valoracion] = @valoracion WHERE [idcomentario] = @idcomentario">
@@ -298,11 +287,10 @@
             </UpdateParameters>
         </asp:SqlDataSource>
 
-<<<<<<< HEAD
-        <asp:SqlDataSource runat="server" ID="sdsTitulos" ConnectionString='<%$ ConnectionStrings:ConeccionSprofe %>' SelectCommand="SELECT [titulo] FROM [Titulos] WHERE ([idprofesor] = @idprofesor)" OnSelected="sdsTitulos_Selected">
-=======
-        <asp:SqlDataSource runat="server" ID="sdsTitulos" ConnectionString='<%$ ConnectionStrings:ConeccionSprofe %>' SelectCommand="SELECT [titulo] FROM [Titulos] WHERE ([idprofesor] = @idprofesor) ORDER BY [titulo]">
->>>>>>> 865ae358e7b3b181a640804435b049bbdb168645
+        <asp:SqlDataSource runat="server" ID="sdsTitulos" ConnectionString='<%$ ConnectionStrings:ConeccionSprofe %>' SelectCommand="SELECT [titulo] FROM [Titulos] WHERE ([idprofesor] = @idprofesor) ORDER BY [titulo]" OnSelected="sdsTitulos_Selected">
+
+        <%--<asp:SqlDataSource runat="server" ID="sdsTitulos" ConnectionString='<%$ ConnectionStrings:ConeccionSprofe %>' SelectCommand="SELECT [titulo] FROM [Titulos] WHERE ([idprofesor] = @idprofesor) ORDER BY [titulo]">--%>
+
             <SelectParameters>
                 <asp:QueryStringParameter QueryStringField="codProf" Name="idprofesor" Type="Int32"></asp:QueryStringParameter>
             </SelectParameters>
