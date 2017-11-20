@@ -36,6 +36,9 @@
         .contenedor-profesores td{
             width:50%;
         }
+        #contenido{
+            min-height: 600px;
+        }
 
     </style>
 </asp:Content>
