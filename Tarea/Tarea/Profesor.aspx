@@ -2,6 +2,13 @@
 
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
     <style>
+
+        #xmlPublicidad {
+            margin-top: 20px;
+            margin: 0 auto;
+            text-align:center;
+            
+        }
         p {
             font-size: medium;
         }
@@ -168,7 +175,7 @@
                                         </div>
                                         <div class="comentario1">
                                             <p class="_comentario">Comentario:</p>
-                                            <asp:TextBox Text='<%# Bind("comentario") %>' runat="server" ID="comentarioTextBox" CssClass="textcomentario"/>
+                                            <asp:TextBox Text='<%# Bind("comentario") %>' runat="server" ID="comentarioTextBox" CssClass="textcomentario" TextMode="MultiLine" Rows="3" Width="500" />
                                         </div>
                                     
                                         <div class="comentario1">
@@ -224,6 +231,9 @@
             </ItemTemplate>
         </asp:Repeater>
 
+        <asp:AdRotator ID="AdRotator1" runat="server" DataSourceID="xmlPublicidad" />
+
+        <asp:XmlDataSource runat="server" ID="xmlPublicidad" DataFile="~/App_Data/Publicherryxd.xml"></asp:XmlDataSource>
         <asp:SqlDataSource runat="server" ID="sdsComentarios" ConnectionString='<%$ ConnectionStrings:ConeccionSprofe %>' SelectCommand="SELECT * FROM [comentarios] WHERE ([idprofesor] = @idprofesor)" OnSelected="sdsComentarios_Selected" DeleteCommand="DELETE FROM [comentarios] WHERE [idprofesor] = @idprofesor" InsertCommand="INSERT INTO [comentarios] ([idprofesor], [usuarionombre], [titulo], [comentario], [valoracion]) VALUES (@idprofesor, @usuarionombre, @titulo, @comentario, @valoracion)" UpdateCommand="UPDATE [comentarios] SET [usuarionombre] = @usuarionombre, [titulo] = @titulo, [comentario] = @comentario, [valoracion] = @valoracion WHERE [idprofesor] = @idprofesor">
             <DeleteParameters>
                 <asp:Parameter Name="idprofesor" Type="Int32"></asp:Parameter>
@@ -264,6 +274,8 @@
                 <asp:QueryStringParameter QueryStringField="codProf" Name="idprofesor" Type="Int32"></asp:QueryStringParameter>
             </SelectParameters>
         </asp:SqlDataSource>
+
+
         <%--
         <div class="row" id="HeaderProfe">
             <h1>Samir Perez Navido</h1>

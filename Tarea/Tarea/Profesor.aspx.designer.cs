@@ -40,6 +40,24 @@ namespace Tarea {
         protected global::System.Web.UI.WebControls.Repeater rComments;
         
         /// <summary>
+        /// Control AdRotator1.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.AdRotator AdRotator1;
+        
+        /// <summary>
+        /// Control xmlPublicidad.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.XmlDataSource xmlPublicidad;
+        
+        /// <summary>
         /// Control sdsComentarios.
         /// </summary>
         /// <remarks>
