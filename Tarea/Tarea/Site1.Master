@@ -9,7 +9,7 @@
     <title>Sprofe</title>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>    
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
     <link rel="icon" href="Imagenes/Icon.png">
 
 
@@ -18,15 +18,17 @@
             color: cadetblue;
             font-weight: bold;
         }
+
         .navbar {
             margin-bottom: 0;
         }
-        #cerrarSesion a{
-            color: white;
-            text-decoration:none;
-        }
-        #headerBtns span{
 
+        #cerrarSesion a {
+            color: white;
+            text-decoration: none;
+        }
+
+        #headerBtns span {
         }
 
         footer {
@@ -48,40 +50,41 @@
         body {
             background-color: gray;
             background-image: url('../Imagenes/Fondo.jpg');
-        }
+        }        
     </style>
     <asp:ContentPlaceHolder ID="head" runat="server">
     </asp:ContentPlaceHolder>
 </head>
 <body>
-    <form id="form1" runat="server">        
+    <form id="form1" runat="server">
         <nav class="navbar navbar-default navbar-static-top" style="font-size: 18px;">
-          <div class="container">
-            <div class="navbar-header">
-              <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
-                <span class="sr-only">Toggle navigation</span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-              </button>
-              <a id="nav-logo" class="navbar-brand" href="Default.aspx"><img src="Imagenes/Logo.png" width="120" height="35" style="margin-top: -6px"></a>
-            </div>
-            <div id="navbar" class="navbar-collapse collapse">                
-                <div class="navbar-form navbar-right" id="headerBtns">
-                    <button type="button" class="btn btn-default" onclick="location.href='Carreras.aspx';"><span class="glyphicon glyphicon-search"></span> Empieza tu búsqueda</button>
-                    <button type="button" class="btn btn-default" onclick="location.href='Contactenos.aspx';"><span class="glyphicon glyphicon-envelope"></span> Contáctenos</button>
-                    <asp:LoginView ID="lvLogin" runat="server">
-                        <AnonymousTemplate>
-                            <asp:Button CssClass="btn btn-primary" ID="btnLogIn" runat="server" Text="Ingresa!" OnClick="btnLogIn_Click" />
-                        </AnonymousTemplate>
-                        <LoggedInTemplate>
-                            <asp:Button CssClass="btn btn-danger" ID="btnLogOut" runat="server" Text="Cerrar Sesión" OnClick="btnLogOut_Click" />
-                        </LoggedInTemplate>
-                    </asp:LoginView>
-                    <asp:LoginName CssClass="negrita" ID="UserName" runat="server" />
+            <div class="container">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <a id="nav-logo" class="navbar-brand" href="Default.aspx">
+                        <img src="Imagenes/Logo.png" width="120" height="35" style="margin-top: -6px"></a>
+                </div>
+                <div id="navbar" class="navbar-collapse collapse">
+                    <div class="navbar-form navbar-right" id="headerBtns">
+                        <button type="button" class="btn btn-default" onclick="location.href='Carreras.aspx';"><span class="glyphicon glyphicon-search"></span>Empieza tu búsqueda</button>
+                        <button type="button" class="btn btn-default" onclick="location.href='Contactenos.aspx';"><span class="glyphicon glyphicon-envelope"></span>Contáctenos</button>
+                        <asp:LoginView ID="lvLogin" runat="server">
+                            <AnonymousTemplate>
+                                <asp:Button CssClass="btn btn-primary" ID="btnLogIn" runat="server" Text="Ingresa!" OnClick="btnLogIn_Click" />
+                            </AnonymousTemplate>
+                            <LoggedInTemplate>
+                                <asp:Button CssClass="btn btn-danger" ID="btnLogOut" runat="server" Text="Cerrar Sesión" OnClick="btnLogOut_Click" />
+                            </LoggedInTemplate>
+                        </asp:LoginView>
+                        <asp:LoginName CssClass="negrita" ID="UserName" runat="server" />
+                    </div>
                 </div>
             </div>
-          </div>
         </nav>
         <asp:ContentPlaceHolder ID="Body" runat="server">
         </asp:ContentPlaceHolder>

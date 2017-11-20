@@ -2,13 +2,12 @@
 
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
     <style>
-
         #xmlPublicidad {
             margin-top: 20px;
             margin: 0 auto;
-            text-align:center;
-            
+            text-align: center;
         }
+
         p {
             font-size: medium;
         }
@@ -59,8 +58,8 @@
             border-radius: 10px;
             background-color: lightgrey;
             padding: 5px;
-            margin-top:10px;
-            margin-bottom:10px;
+            margin-top: 10px;
+            margin-bottom: 10px;
         }
 
         .rate {
@@ -89,12 +88,20 @@
             }
         }
 
-        .comentario1{
+        .comentario1 {
             padding: 10px;
             padding-left: 0;
         }
-        .paddingalinear{
-            padding:0;
+
+        .paddingalinear {
+            padding: 0;
+        }
+        .publirota img{
+            margin:auto;
+        }
+        .relleno{
+            min-height:20px;
+            border-bottom: 2px solid gray;
         }
     </style>
 </asp:Content>
@@ -129,6 +136,9 @@
                                 <li class="text-left">Fundador de SPB (Sociedad de polladas bailables) </li>
                                 <li class="text-left">Dj Sans</li>--%>
                             </ul>
+                            <asp:Panel ID="pNoTitulos" runat="server" Visible="false">
+                                <p>No se encontraron títulos :(</p>
+                            </asp:Panel>
                         </div>
                     </div>
                     <div class="col-md-8">
@@ -155,17 +165,17 @@
                                 <p><span>Años de experiencia: </span>6 años</p>
                                 <br />--%>
                                 <div class="boton">
-                                    <asp:Button ID="btnLike" runat="server" Text="Me gusta!" OnClick="btnLike_Click" /><img src="Imagenes/like.png" style="width: 30px; height: 30px" />
+                                    <asp:Button ID="btnLike" CssClass="btn btn-primary" runat="server" Text="Me gusta!" OnClick="btnLike_Click" /><img src="Imagenes/like.png" style="width: 30px; height: 30px" />
                                     <span class="rate"><%#Eval("likes")%></span>
                                     <%--<button type="button" title="Like" onclick="alert('Has recomendado a este profesor')">
                                         </button>--%>
-                                    <button type="button" title="Reportar profesor" onclick="Rform()" style="margin-left: 5%">
-                                        <img src="Imagenes/Block.png" style="width: 30px; height: 30px" /></button><span class="rate"></span>
+                                    <%--<button type="button" title="Reportar profesor" onclick="Rform()" style="margin-left: 5%">
+                                        <img src="Imagenes/Block.png" style="width: 30px; height: 30px" /></button><span class="rate"></span>--%>
                                 </div>
 
                             </div>
                         </div>
-                        
+
                         <div class="row">
                             <div class="col-md-8 paddingalinear">
                                 <h1 class="info" id="comentarios">Comentarios:</h1>
@@ -174,14 +184,14 @@
                                 <asp:FormView ID="fvComentarios" DefaultMode="Insert" runat="server" DataKeyNames="idprofesor,idusuario" DataSourceID="sdsComentarios" OnItemInserted="fvComentarios_ItemInserted" OnItemInserting="fvComentarios_ItemInserting">
                                     <InsertItemTemplate>
                                         <div class="comentario1">
-                                            <p class="_comentario">Título:</p>                            
-                                            <asp:TextBox Text='<%# Bind("titulo") %>' runat="server" ID="tituloTextBox" CssClass="textcomentario"/>
+                                            <p class="_comentario">Título:</p>
+                                            <asp:TextBox Text='<%# Bind("titulo") %>' runat="server" ID="tituloTextBox" CssClass="textcomentario" />
                                         </div>
                                         <div class="comentario1">
                                             <p class="_comentario">Comentario:</p>
                                             <asp:TextBox Text='<%# Bind("comentario") %>' runat="server" ID="comentarioTextBox" CssClass="textcomentario" TextMode="MultiLine" Rows="3" Width="500" />
                                         </div>
-                                    
+
                                         <div class="comentario1">
                                             <p class="_comentario">Valoración:</p>
                                             <asp:DropDownList ID="ddlValoracion" runat="server">
@@ -189,7 +199,7 @@
                                                 <asp:ListItem Value="Negativo" Text='Negativo'></asp:ListItem>
                                             </asp:DropDownList>
                                         </div>
-                                    
+
 
                                         <asp:Button CssClass="btn btn-primary" runat="server" Text="Insertar" CommandName="Insert" ID="InsertButton" CausesValidation="True" />
 
@@ -212,14 +222,14 @@
                                 <a>Ver más comentarios</a>
                                 --%>
                             </div>
-                            
+
                         </div>
                     </div>
                 </div>
 
             </ItemTemplate>
         </asp:FormView>
-        
+
 
         <h2>Comentarios Pasados:</h2>
 
@@ -236,7 +246,12 @@
             </ItemTemplate>
         </asp:Repeater>
 
-        <asp:AdRotator ID="AdRotator1" runat="server" DataSourceID="xmlPublicidad" />
+        <div class="publirota">
+            <div class="relleno"></div>
+            <br />
+            <asp:AdRotator ID="AdRotator1" runat="server" DataSourceID="xmlPublicidad" CssClass="img-responsive" Width="800" Height="200"/>
+        </div>
+        
 
         <asp:XmlDataSource runat="server" ID="xmlPublicidad" DataFile="~/App_Data/Publicherryxd.xml"></asp:XmlDataSource>
         <asp:SqlDataSource runat="server" ID="sdsComentarios" ConnectionString='<%$ ConnectionStrings:ConeccionSprofe %>' SelectCommand="SELECT * FROM [comentarios] WHERE ([idprofesor] = @idprofesor)" OnSelected="sdsComentarios_Selected" DeleteCommand="DELETE FROM [comentarios] WHERE [idcomentario] = @idcomentario" InsertCommand="INSERT INTO [comentarios] ([idprofesor], [usuarionombre], [titulo], [comentario], [valoracion]) VALUES (@idprofesor, @usuarionombre, @titulo, @comentario, @valoracion)" UpdateCommand="UPDATE [comentarios] SET [idprofesor] = @idprofesor, [usuarionombre] = @usuarionombre, [titulo] = @titulo, [comentario] = @comentario, [valoracion] = @valoracion WHERE [idcomentario] = @idcomentario">
@@ -263,7 +278,7 @@
             </UpdateParameters>
         </asp:SqlDataSource>
 
-        <asp:SqlDataSource runat="server" ID="sdsTitulos" ConnectionString='<%$ ConnectionStrings:ConeccionSprofe %>' SelectCommand="SELECT [titulo] FROM [Titulos] WHERE ([idprofesor] = @idprofesor)">
+        <asp:SqlDataSource runat="server" ID="sdsTitulos" ConnectionString='<%$ ConnectionStrings:ConeccionSprofe %>' SelectCommand="SELECT [titulo] FROM [Titulos] WHERE ([idprofesor] = @idprofesor)" OnSelected="sdsTitulos_Selected">
             <SelectParameters>
                 <asp:QueryStringParameter QueryStringField="codProf" Name="idprofesor" Type="Int32"></asp:QueryStringParameter>
             </SelectParameters>

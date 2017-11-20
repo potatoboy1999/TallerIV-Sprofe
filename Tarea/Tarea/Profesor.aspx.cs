@@ -10,7 +10,8 @@ using Tarea.Models;
 namespace Tarea
 {
     public partial class Profesor : System.Web.UI.Page
-    {
+    {        
+
         protected void Page_Load(object sender, EventArgs e)
         {
 
@@ -54,6 +55,16 @@ namespace Tarea
             var idProf = Convert.ToInt32(Request.QueryString["codProf"]);
             datos.AddLike(idProf);
             Response.Redirect("Profesor.aspx?codProf=" + idProf + "#");
+        }
+
+        protected void sdsTitulos_Selected(object sender, SqlDataSourceStatusEventArgs e)
+        {
+            if (e.AffectedRows == 0)
+            {
+                var panel = (Panel)(fvProfe.FindControl("pNoTitulos"));
+                panel.Visible = true;
+
+            }
         }
     }
 }
