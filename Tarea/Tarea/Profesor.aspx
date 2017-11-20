@@ -1,4 +1,4 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Site1.Master" AutoEventWireup="true" CodeBehind="Profesor.aspx.cs" Inherits="Tarea.Profesor" %>
+﻿<%@ Page Title="" UnobtrusiveValidationMode="none" Language="C#" MasterPageFile="~/Site1.Master" AutoEventWireup="true" CodeBehind="Profesor.aspx.cs" Inherits="Tarea.Profesor" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
     <style>
@@ -38,7 +38,7 @@
         .info {
             border-bottom: solid;
             border-bottom-color: cadetblue;
-            margin-bottom: 30px;
+            margin-bottom: 20px;
         }
 
         aside {
@@ -55,11 +55,15 @@
         }
 
         .comentarios {
-            border-radius: 10px;
-            background-color: lightgrey;
+            border-bottom: solid;
+            border-bottom-color: cadetblue;
+            border-width: 1px;
             padding: 5px;
+<<<<<<< HEAD
             margin-top: 10px;
             margin-bottom: 10px;
+=======
+>>>>>>> 865ae358e7b3b181a640804435b049bbdb168645
         }
 
         .rate {
@@ -96,12 +100,26 @@
         .paddingalinear {
             padding: 0;
         }
+<<<<<<< HEAD
         .publirota img{
             margin:auto;
         }
         .relleno{
             min-height:20px;
             border-bottom: 2px solid gray;
+=======
+        .comentarios .leftCol{
+            float:left;
+            width:70px;
+            margin-top:20px;
+        }
+        .comentarios .rightCol{
+            margin-left: 70px;
+        }
+        #ads{
+            padding: 10px 0;
+            text-align:center;
+>>>>>>> 865ae358e7b3b181a640804435b049bbdb168645
         }
     </style>
 </asp:Content>
@@ -127,14 +145,6 @@
                                         <li class="text-left"><%#Eval("titulo")%></li>
                                     </ItemTemplate>
                                 </asp:Repeater>
-                                <%--
-                                <li class="text-left">Ing. Musical  </li>
-                                <li class="text-left">Máster en musicología </li>
-                                <li class="text-left">Máster de la música </li>
-                                <li class="text-left">Máster Dj prodcutor</li>
-                                <li class="text-left">Máster etnomusicología</li>
-                                <li class="text-left">Fundador de SPB (Sociedad de polladas bailables) </li>
-                                <li class="text-left">Dj Sans</li>--%>
                             </ul>
                             <asp:Panel ID="pNoTitulos" runat="server" Visible="false">
                                 <p>No se encontraron títulos :(</p>
@@ -178,26 +188,35 @@
 
                         <div class="row">
                             <div class="col-md-8 paddingalinear">
-                                <h1 class="info" id="comentarios">Comentarios:</h1>
-                                <%--<p><span>El 85% de los comentarios son positivos</span></p>--%>
-                                <asp:Label ID="lblComentarios" runat="server" Text="Ingrese su comentario:"></asp:Label><br />
+                                <h1 class="info" id="comentarios">Ingrese su comentario</h1>
                                 <asp:FormView ID="fvComentarios" DefaultMode="Insert" runat="server" DataKeyNames="idprofesor,idusuario" DataSourceID="sdsComentarios" OnItemInserted="fvComentarios_ItemInserted" OnItemInserting="fvComentarios_ItemInserting">
                                     <InsertItemTemplate>
                                         <div class="comentario1">
                                             <p class="_comentario">Título:</p>
                                             <asp:TextBox Text='<%# Bind("titulo") %>' runat="server" ID="tituloTextBox" CssClass="textcomentario" />
+<<<<<<< HEAD
+=======
+                                            <asp:RequiredFieldValidator ID="rfvTitulo" CssClass="error" runat="server" ErrorMessage="ErrorTitulo" ControlToValidate="tituloTextBox" Text="* Ingrese un Título"></asp:RequiredFieldValidator>
+>>>>>>> 865ae358e7b3b181a640804435b049bbdb168645
                                         </div>
                                         <div class="comentario1">
                                             <p class="_comentario">Comentario:</p>
                                             <asp:TextBox Text='<%# Bind("comentario") %>' runat="server" ID="comentarioTextBox" CssClass="textcomentario" TextMode="MultiLine" Rows="3" Width="500" />
+                                            <asp:RequiredFieldValidator ID="rfvComentario" CssClass="error" runat="server" ErrorMessage="ErrorComentario" ControlToValidate="comentarioTextBox" Text="* Ingrese su comentario"></asp:RequiredFieldValidator>
                                         </div>
 
                                         <div class="comentario1">
                                             <p class="_comentario">Valoración:</p>
-                                            <asp:DropDownList ID="ddlValoracion" runat="server">
+                                            <asp:RadioButtonList ID="rblValoracion" runat="server">
+                                                <asp:ListItem Value="Positiva" Text='Positiva'></asp:ListItem>
+                                                <asp:ListItem Value="Negativa" Text='Negativa'></asp:ListItem>
+                                            </asp:RadioButtonList>
+
+                                            <asp:RequiredFieldValidator ID="rfvValoracion" CssClass="error" runat="server" ErrorMessage="ErrorValoracion" ControlToValidate="rblValoracion" Text="* Ingrese su valoración"></asp:RequiredFieldValidator>
+                                            <%--<asp:DropDownList ID="ddlValoracion" runat="server">
                                                 <asp:ListItem Selected="True" Value="Positivo" Text='Positivo'></asp:ListItem>
                                                 <asp:ListItem Value="Negativo" Text='Negativo'></asp:ListItem>
-                                            </asp:DropDownList>
+                                            </asp:DropDownList>--%>
                                         </div>
 
 
@@ -205,22 +224,6 @@
 
                                     </InsertItemTemplate>
                                 </asp:FormView>
-
-
-                                <%--<h2>Comentario positivo más reciente:</h2>
-                                <div class="comentarios">
-                                    <h3>El profesor es divertido</h3>
-                                    <p>Si quieres divertirte y aprender yo recomiendo a este profe</p>
-                                </div>
-
-                                <h2>Comentario negativo más reciente:</h2>
-                                <div class="comentarios">
-                                    <h3>No sabe enseñar</h3>
-                                    <p>Muchas veces no se le entiende cuando explica, al final tienes que estudiar por tu cuenta para entender los temas </p>
-                                </div>
-
-                                <a>Ver más comentarios</a>
-                                --%>
                             </div>
 
                         </div>
@@ -229,9 +232,13 @@
 
             </ItemTemplate>
         </asp:FormView>
+<<<<<<< HEAD
+
+=======
+>>>>>>> 865ae358e7b3b181a640804435b049bbdb168645
 
 
-        <h2>Comentarios Pasados:</h2>
+        <h2 class="info">Comentarios</h2>
 
         <asp:Panel ID="pNodata" runat="server" Visible="false">
             <p>No se encontraron comentarios</p>
@@ -239,19 +246,32 @@
 
         <asp:Repeater ID="rComments" runat="server" DataSourceID="sdsComentarios">
             <ItemTemplate>
+
                 <div class="comentarios">
-                    <h3><%#Eval("titulo") %></h3>
-                    <p><%#Eval("comentario") %></p>
+                    <div class="leftCol">
+                        <img src="Imagenes/<%#Eval("valoracion")%>.jpg" width="50" height="50" />
+                    </div>
+                    <div class="rightCol">
+                        <h3><%#Eval("titulo") %></h3>
+                        <p><%#Eval("comentario") %></p>
+                    </div>
                 </div>
+
             </ItemTemplate>
         </asp:Repeater>
 
+<<<<<<< HEAD
         <div class="publirota">
             <div class="relleno"></div>
             <br />
             <asp:AdRotator ID="AdRotator1" runat="server" DataSourceID="xmlPublicidad" CssClass="img-responsive" Width="800" Height="200"/>
         </div>
         
+=======
+        <div id="ads">
+            <asp:AdRotator ID="AdRotator1" runat="server" DataSourceID="xmlPublicidad" />
+        </div>
+>>>>>>> 865ae358e7b3b181a640804435b049bbdb168645
 
         <asp:XmlDataSource runat="server" ID="xmlPublicidad" DataFile="~/App_Data/Publicherryxd.xml"></asp:XmlDataSource>
         <asp:SqlDataSource runat="server" ID="sdsComentarios" ConnectionString='<%$ ConnectionStrings:ConeccionSprofe %>' SelectCommand="SELECT * FROM [comentarios] WHERE ([idprofesor] = @idprofesor)" OnSelected="sdsComentarios_Selected" DeleteCommand="DELETE FROM [comentarios] WHERE [idcomentario] = @idcomentario" InsertCommand="INSERT INTO [comentarios] ([idprofesor], [usuarionombre], [titulo], [comentario], [valoracion]) VALUES (@idprofesor, @usuarionombre, @titulo, @comentario, @valoracion)" UpdateCommand="UPDATE [comentarios] SET [idprofesor] = @idprofesor, [usuarionombre] = @usuarionombre, [titulo] = @titulo, [comentario] = @comentario, [valoracion] = @valoracion WHERE [idcomentario] = @idcomentario">
@@ -278,7 +298,11 @@
             </UpdateParameters>
         </asp:SqlDataSource>
 
+<<<<<<< HEAD
         <asp:SqlDataSource runat="server" ID="sdsTitulos" ConnectionString='<%$ ConnectionStrings:ConeccionSprofe %>' SelectCommand="SELECT [titulo] FROM [Titulos] WHERE ([idprofesor] = @idprofesor)" OnSelected="sdsTitulos_Selected">
+=======
+        <asp:SqlDataSource runat="server" ID="sdsTitulos" ConnectionString='<%$ ConnectionStrings:ConeccionSprofe %>' SelectCommand="SELECT [titulo] FROM [Titulos] WHERE ([idprofesor] = @idprofesor) ORDER BY [titulo]">
+>>>>>>> 865ae358e7b3b181a640804435b049bbdb168645
             <SelectParameters>
                 <asp:QueryStringParameter QueryStringField="codProf" Name="idprofesor" Type="Int32"></asp:QueryStringParameter>
             </SelectParameters>
@@ -295,77 +319,6 @@
                 <asp:QueryStringParameter QueryStringField="codProf" Name="idprofesor" Type="Int32"></asp:QueryStringParameter>
             </SelectParameters>
         </asp:SqlDataSource>
-
-
-        <%--
-        <div class="row" id="HeaderProfe">
-            <h1>Samir Perez Navido</h1>
-        </div>
-        <div class="row">
-            <div class="col-md-4">
-                <img src="Imagenes/profe.PNG" class="img-rounded img-responsive" height="450" width="300" />
-                <div id="Titulos">
-                    <h4><strong>Títulos:</strong></h4>
-                    <ul>
-                        <li class="text-left">Ing. Musical  </li>
-                        <li class="text-left">Máster en musicología </li>
-                        <li class="text-left">Máster de la música </li>
-                        <li class="text-left">Máster Dj prodcutor</li>
-                        <li class="text-left">Máster etnomusicología</li>
-                        <li class="text-left">Fundador de SPB (Sociedad de polladas bailables) </li>
-                        <li class="text-left">Dj Sans</li>
-                    </ul>
-                </div>
-
-
-            </div>
-            <div class="col-md-8">
-                <div class="row" style="height: 400px;">
-                    <div class="col-md-8">
-                        <h1 id="info">Información General</h1>
-                        <p><span>Curso: </span>Entrenamiento Rítmico y Auditivo I</p><br />
-                        <p><span>% de aceptación: </span>77.5%</p><br />
-                        <p><span>% de aprobados por ciclo: </span>80%</p><br />
-                        <p><span>Años de experiencia: </span>6 años</p><br />
-                        <div class="boton">
-                            <button type="button" title="Like" onclick="alert('Has recomendado a este profesor')">
-                                <img src="Imagenes/like.png" style="width: 30px; height: 30px" /></button><span class="rate">70%</span>
-                            <button type="button" title="Reportar profesor" onclick="Rform()" style="margin-left: 5%">
-                                <img src="Imagenes/Block.png" style="width: 30px; height: 30px" /></button><span class="rate"></span>
-                        </div>
-                        <script>
-                            window.open("https://www.codigo.pe/wp-content/uploads/2016/09/Afiche-Carlos-Bernal-717x1024.jpg", "_blank", "toolbar=yes,scrollbars=yes,resizable=yes,top=100,left=300,width=400,height=400");
-                            function Rform() {
-                                var text;
-                                var why = prompt("¿Porque reportaste al profesor?");
-                                if (why == null || why == "") {
-                                    alert("Debes justificar el report ");
-                                    why = prompt("¿Porque reportaste al profesor?");
-                                } else {
-                                    alert("Has reportado al profesor, tu report se envio correctamente");
-                                }
-                            }</script>
-                    </div>
-                </div>
-                <div class="row">
-                    <h1>Comentarios:</h1>
-                    <p><span>El 85% de los comentarios son positivos</span></p>
-                    <h2>Comentario positivo más reciente:</h2>
-                    <div class="comentarios">
-                        <h3>El profesor es divertido</h3>
-                        <p>Si quieres divertirte y aprender yo recomiendo a este profe</p>
-                    </div>
-
-                    <h2>Comentario negativo más reciente:</h2>
-                    <div class="comentarios">
-                        <h3>No sabe enseñar</h3>
-                        <p>Muchas veces no se le entiende cuando explica, al final tienes que estudiar por tu cuenta para entender los temas </p>
-                    </div>
-
-                    <a>Ver más comentarios</a>
-                </div>
-            </div>
-        </div>--%>
     </div>
 
     <script>

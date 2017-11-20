@@ -91,7 +91,9 @@
     <Content Include="Imagenes\like.png" />
     <Content Include="Imagenes\Logo.png" />
     <Content Include="Imagenes\Logo_usil.png" />
+    <Content Include="Imagenes\Negativa.jpg" />
     <Content Include="Imagenes\Opina.png" />
+    <Content Include="Imagenes\Positiva.jpg" />
     <Content Include="Imagenes\profe.PNG" />
     <Content Include="Imagenes\Profesores\default.jpg" />
     <Content Include="Imagenes\Profesores\destacado.jpg" />

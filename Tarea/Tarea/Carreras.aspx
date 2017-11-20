@@ -130,9 +130,9 @@
                     <h2>Curso:</h2>
                     <asp:DropDownList ID="ddlCursos" runat="server" DataSourceID="sdsCursos" DataTextField="nombre" DataValueField="idcurso"></asp:DropDownList>
 
-                    <asp:SqlDataSource runat="server" ID="sdsCursos" ConnectionString='<%$ ConnectionStrings:ConeccionSprofe %>' SelectCommand="SELECT cursos.nombre, cursos.idcurso FROM cursooncarrera INNER JOIN carreras ON carreras.idcarrera = cursooncarrera.idcarrera INNER JOIN cursos ON cursooncarrera.idcurso = cursos.idcurso WHERE (carreras.nombrecarrera = @nombrecarrera)">
+                    <asp:SqlDataSource runat="server" ID="sdsCursos" ConnectionString='<%$ ConnectionStrings:ConeccionSprofe %>' SelectCommand="SELECT cursos.nombre, cursos.idcurso FROM cursooncarrera INNER JOIN carreras ON carreras.idcarrera = cursooncarrera.idcarrera INNER JOIN cursos ON cursooncarrera.idcurso = cursos.idcurso WHERE (carreras.nombrecarrera = @nombrecarrera) ORDER BY cursos.nombre">
                         <SelectParameters>
-                            <asp:Parameter DefaultValue="comunicaciones" Name="nombrecarrera"></asp:Parameter>
+                            <asp:Parameter DefaultValue="Administración" Name="nombrecarrera"></asp:Parameter>
                         </SelectParameters>
                     </asp:SqlDataSource>
 
