@@ -12,7 +12,7 @@ namespace Tarea.Models
         public String apellido { get; set; }
         public String descripcion { get; set; }
         public String imagen { get; set; }
-        public String puntaje { get; set; }
-        public String likes { get; set; }
+        public decimal puntaje { get; set; }
+        public int likes { get; set; }
     }
 }
