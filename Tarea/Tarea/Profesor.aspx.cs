@@ -26,7 +26,7 @@ namespace Tarea
 
             var idProfe = Convert.ToInt32(Request.QueryString["codProf"]);
             var usuario = Page.User.Identity.Name;
-            var val = "Positivo";
+            var val = "Positiva";
 
             e.Values["idprofesor"] = idProfe;
             e.Values["usuarionombre"] = usuario;

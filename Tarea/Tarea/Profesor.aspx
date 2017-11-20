@@ -2,13 +2,12 @@
 
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
     <style>
-
         #xmlPublicidad {
             margin-top: 20px;
             margin: 0 auto;
-            text-align:center;
-            
+            text-align: center;
         }
+
         p {
             font-size: medium;
         }
@@ -56,7 +55,7 @@
         }
 
         .comentarios {
-            border-bottom:solid;
+            border-bottom: solid;
             border-bottom-color: cadetblue;
             border-width: 1px;
             padding: 5px;
@@ -88,15 +87,26 @@
             }
         }
 
-        .comentario1{
+        .comentario1 {
             padding: 10px;
             padding-left: 0;
         }
-        .paddingalinear{
-            padding:0;
-        }
 
-        
+        .paddingalinear {
+            padding: 0;
+        }
+        .comentarios .leftCol{
+            float:left;
+            width:70px;
+            margin-top:20px;
+        }
+        .comentarios .rightCol{
+            margin-left: 70px;
+        }
+        #ads{
+            padding: 10px 0;
+            text-align:center;
+        }
     </style>
 </asp:Content>
 
@@ -158,21 +168,21 @@
 
                             </div>
                         </div>
-                        
+
                         <div class="row">
                             <div class="col-md-8 paddingalinear">
-                                <h1 class="info" id="comentarios">Ingrese su comentario</h1>                               
+                                <h1 class="info" id="comentarios">Ingrese su comentario</h1>
                                 <asp:FormView ID="fvComentarios" DefaultMode="Insert" runat="server" DataKeyNames="idprofesor,idusuario" DataSourceID="sdsComentarios" OnItemInserted="fvComentarios_ItemInserted" OnItemInserting="fvComentarios_ItemInserting">
                                     <InsertItemTemplate>
                                         <div class="comentario1">
-                                            <p class="_comentario">Título:</p>                            
-                                            <asp:TextBox Text='<%# Bind("titulo") %>' runat="server" ID="tituloTextBox" CssClass="textcomentario"/>
+                                            <p class="_comentario">Título:</p>
+                                            <asp:TextBox Text='<%# Bind("titulo") %>' runat="server" ID="tituloTextBox" CssClass="textcomentario" />
                                         </div>
                                         <div class="comentario1">
                                             <p class="_comentario">Comentario:</p>
                                             <asp:TextBox Text='<%# Bind("comentario") %>' runat="server" ID="comentarioTextBox" CssClass="textcomentario" TextMode="MultiLine" Rows="3" Width="500" />
                                         </div>
-                                    
+
                                         <div class="comentario1">
                                             <p class="_comentario">Valoración:</p>
                                             <asp:DropDownList ID="ddlValoracion" runat="server">
@@ -180,21 +190,21 @@
                                                 <asp:ListItem Value="Negativo" Text='Negativo'></asp:ListItem>
                                             </asp:DropDownList>
                                         </div>
-                                    
+
 
                                         <asp:Button CssClass="btn btn-primary" runat="server" Text="Insertar" CommandName="Insert" ID="InsertButton" CausesValidation="True" />
 
                                     </InsertItemTemplate>
                                 </asp:FormView>
                             </div>
-                            
+
                         </div>
                     </div>
                 </div>
 
             </ItemTemplate>
         </asp:FormView>
-        
+
 
         <h2 class="info">Comentarios</h2>
 
@@ -204,14 +214,23 @@
 
         <asp:Repeater ID="rComments" runat="server" DataSourceID="sdsComentarios">
             <ItemTemplate>
+
                 <div class="comentarios">
-                    <h3><%#Eval("titulo") %></h3>
-                    <p><%#Eval("comentario") %></p>
+                    <div class="leftCol">
+                        <img src="Imagenes/<%#Eval("valoracion")%>.jpg" width="50" height="50" />
+                    </div>
+                    <div class="rightCol">
+                        <h3><%#Eval("titulo") %></h3>
+                        <p><%#Eval("comentario") %></p>
+                    </div>
                 </div>
+
             </ItemTemplate>
         </asp:Repeater>
 
-        <asp:AdRotator ID="AdRotator1" runat="server" DataSourceID="xmlPublicidad" />
+        <div id="ads">
+            <asp:AdRotator ID="AdRotator1" runat="server" DataSourceID="xmlPublicidad" />
+        </div>
 
         <asp:XmlDataSource runat="server" ID="xmlPublicidad" DataFile="~/App_Data/Publicherryxd.xml"></asp:XmlDataSource>
         <asp:SqlDataSource runat="server" ID="sdsComentarios" ConnectionString='<%$ ConnectionStrings:ConeccionSprofe %>' SelectCommand="SELECT * FROM [comentarios] WHERE ([idprofesor] = @idprofesor)" OnSelected="sdsComentarios_Selected" DeleteCommand="DELETE FROM [comentarios] WHERE [idcomentario] = @idcomentario" InsertCommand="INSERT INTO [comentarios] ([idprofesor], [usuarionombre], [titulo], [comentario], [valoracion]) VALUES (@idprofesor, @usuarionombre, @titulo, @comentario, @valoracion)" UpdateCommand="UPDATE [comentarios] SET [idprofesor] = @idprofesor, [usuarionombre] = @usuarionombre, [titulo] = @titulo, [comentario] = @comentario, [valoracion] = @valoracion WHERE [idcomentario] = @idcomentario">
