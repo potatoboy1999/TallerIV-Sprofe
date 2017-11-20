@@ -14,6 +14,10 @@
 
 
     <style>
+        .negrita {
+            color: cadetblue;
+            font-weight: bold;
+        }
         .navbar {
             margin-bottom: 0;
         }
@@ -74,7 +78,7 @@
                             <asp:Button CssClass="btn btn-danger" ID="btnLogOut" runat="server" Text="Cerrar Sesión" OnClick="btnLogOut_Click" />
                         </LoggedInTemplate>
                     </asp:LoginView>
-                    <asp:LoginName ID="UserName" runat="server" />
+                    <asp:LoginName CssClass="negrita" ID="UserName" runat="server" />
                 </div>
             </div>
           </div>
