@@ -39,7 +39,7 @@
         .info {
             border-bottom: solid;
             border-bottom-color: cadetblue;
-            margin-bottom: 30px;
+            margin-bottom: 20px;
         }
 
         aside {
@@ -56,11 +56,10 @@
         }
 
         .comentarios {
-            border-radius: 10px;
-            background-color: lightgrey;
+            border-bottom:solid;
+            border-bottom-color: cadetblue;
+            border-width: 1px;
             padding: 5px;
-            margin-top:10px;
-            margin-bottom:10px;
         }
 
         .rate {
@@ -96,6 +95,8 @@
         .paddingalinear{
             padding:0;
         }
+
+        
     </style>
 </asp:Content>
 
@@ -120,14 +121,6 @@
                                         <li class="text-left"><%#Eval("titulo")%></li>
                                     </ItemTemplate>
                                 </asp:Repeater>
-                                <%--
-                                <li class="text-left">Ing. Musical  </li>
-                                <li class="text-left">Máster en musicología </li>
-                                <li class="text-left">Máster de la música </li>
-                                <li class="text-left">Máster Dj prodcutor</li>
-                                <li class="text-left">Máster etnomusicología</li>
-                                <li class="text-left">Fundador de SPB (Sociedad de polladas bailables) </li>
-                                <li class="text-left">Dj Sans</li>--%>
                             </ul>
                         </div>
                     </div>
@@ -168,9 +161,7 @@
                         
                         <div class="row">
                             <div class="col-md-8 paddingalinear">
-                                <h1 class="info" id="comentarios">Comentarios:</h1>
-                                <%--<p><span>El 85% de los comentarios son positivos</span></p>--%>
-                                <asp:Label ID="lblComentarios" runat="server" Text="Ingrese su comentario:"></asp:Label><br />
+                                <h1 class="info" id="comentarios">Ingrese su comentario</h1>                               
                                 <asp:FormView ID="fvComentarios" DefaultMode="Insert" runat="server" DataKeyNames="idprofesor,idusuario" DataSourceID="sdsComentarios" OnItemInserted="fvComentarios_ItemInserted" OnItemInserting="fvComentarios_ItemInserting">
                                     <InsertItemTemplate>
                                         <div class="comentario1">
@@ -195,22 +186,6 @@
 
                                     </InsertItemTemplate>
                                 </asp:FormView>
-
-
-                                <%--<h2>Comentario positivo más reciente:</h2>
-                                <div class="comentarios">
-                                    <h3>El profesor es divertido</h3>
-                                    <p>Si quieres divertirte y aprender yo recomiendo a este profe</p>
-                                </div>
-
-                                <h2>Comentario negativo más reciente:</h2>
-                                <div class="comentarios">
-                                    <h3>No sabe enseñar</h3>
-                                    <p>Muchas veces no se le entiende cuando explica, al final tienes que estudiar por tu cuenta para entender los temas </p>
-                                </div>
-
-                                <a>Ver más comentarios</a>
-                                --%>
                             </div>
                             
                         </div>
@@ -221,7 +196,7 @@
         </asp:FormView>
         
 
-        <h2>Comentarios Pasados:</h2>
+        <h2 class="info">Comentarios</h2>
 
         <asp:Panel ID="pNodata" runat="server" Visible="false">
             <p>No se encontraron comentarios</p>
@@ -280,77 +255,6 @@
                 <asp:QueryStringParameter QueryStringField="codProf" Name="idprofesor" Type="Int32"></asp:QueryStringParameter>
             </SelectParameters>
         </asp:SqlDataSource>
-
-
-        <%--
-        <div class="row" id="HeaderProfe">
-            <h1>Samir Perez Navido</h1>
-        </div>
-        <div class="row">
-            <div class="col-md-4">
-                <img src="Imagenes/profe.PNG" class="img-rounded img-responsive" height="450" width="300" />
-                <div id="Titulos">
-                    <h4><strong>Títulos:</strong></h4>
-                    <ul>
-                        <li class="text-left">Ing. Musical  </li>
-                        <li class="text-left">Máster en musicología </li>
-                        <li class="text-left">Máster de la música </li>
-                        <li class="text-left">Máster Dj prodcutor</li>
-                        <li class="text-left">Máster etnomusicología</li>
-                        <li class="text-left">Fundador de SPB (Sociedad de polladas bailables) </li>
-                        <li class="text-left">Dj Sans</li>
-                    </ul>
-                </div>
-
-
-            </div>
-            <div class="col-md-8">
-                <div class="row" style="height: 400px;">
-                    <div class="col-md-8">
-                        <h1 id="info">Información General</h1>
-                        <p><span>Curso: </span>Entrenamiento Rítmico y Auditivo I</p><br />
-                        <p><span>% de aceptación: </span>77.5%</p><br />
-                        <p><span>% de aprobados por ciclo: </span>80%</p><br />
-                        <p><span>Años de experiencia: </span>6 años</p><br />
-                        <div class="boton">
-                            <button type="button" title="Like" onclick="alert('Has recomendado a este profesor')">
-                                <img src="Imagenes/like.png" style="width: 30px; height: 30px" /></button><span class="rate">70%</span>
-                            <button type="button" title="Reportar profesor" onclick="Rform()" style="margin-left: 5%">
-                                <img src="Imagenes/Block.png" style="width: 30px; height: 30px" /></button><span class="rate"></span>
-                        </div>
-                        <script>
-                            window.open("https://www.codigo.pe/wp-content/uploads/2016/09/Afiche-Carlos-Bernal-717x1024.jpg", "_blank", "toolbar=yes,scrollbars=yes,resizable=yes,top=100,left=300,width=400,height=400");
-                            function Rform() {
-                                var text;
-                                var why = prompt("¿Porque reportaste al profesor?");
-                                if (why == null || why == "") {
-                                    alert("Debes justificar el report ");
-                                    why = prompt("¿Porque reportaste al profesor?");
-                                } else {
-                                    alert("Has reportado al profesor, tu report se envio correctamente");
-                                }
-                            }</script>
-                    </div>
-                </div>
-                <div class="row">
-                    <h1>Comentarios:</h1>
-                    <p><span>El 85% de los comentarios son positivos</span></p>
-                    <h2>Comentario positivo más reciente:</h2>
-                    <div class="comentarios">
-                        <h3>El profesor es divertido</h3>
-                        <p>Si quieres divertirte y aprender yo recomiendo a este profe</p>
-                    </div>
-
-                    <h2>Comentario negativo más reciente:</h2>
-                    <div class="comentarios">
-                        <h3>No sabe enseñar</h3>
-                        <p>Muchas veces no se le entiende cuando explica, al final tienes que estudiar por tu cuenta para entender los temas </p>
-                    </div>
-
-                    <a>Ver más comentarios</a>
-                </div>
-            </div>
-        </div>--%>
     </div>
 
     <script>
