@@ -15,15 +15,11 @@ namespace Tarea.Models
 
             using (var conexion = new SqlConnection(cadena.ConnectionString))
             {
-                conexion.Open();
-                
+                var query = $"UPDATE profesores SET likes = likes + 1 WHERE idprofesor = {idprofe}";
 
-                var query = $"UPDATE Profesores SET (likes = likes + 1) WHERE(idprofesor = {idprofe})";
-
-                using (var comando = new SqlCommand(query, conexion))
-                {
-                    comando.ExecuteNonQuery();
-                }
+                SqlCommand command = new SqlCommand(query, conexion);
+                command.Connection.Open();
+                command.ExecuteNonQuery();
             }
         }
     }

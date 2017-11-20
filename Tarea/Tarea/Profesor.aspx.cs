@@ -5,6 +5,7 @@ using System.Web;
 using System.Web.Security;
 using System.Web.UI;
 using System.Web.UI.WebControls;
+using Tarea.Models;
 
 namespace Tarea
 {
@@ -45,6 +46,14 @@ namespace Tarea
             {
                 pNodata.Visible = true;
             }
+        }
+
+        protected void btnLike_Click(object sender, EventArgs e)
+        {
+            accesoBD datos = new accesoBD();
+            var idProf = Convert.ToInt32(Request.QueryString["codProf"]);
+            datos.AddLike(idProf);
+            Response.Redirect("Profesor.aspx?codProf=" + idProf + "#");
         }
     }
 }

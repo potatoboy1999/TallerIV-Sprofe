@@ -93,7 +93,7 @@
             padding: 10px;
             padding-left: 0;
         }
-        #paddingalinear{
+        .paddingalinear{
             padding:0;
         }
     </style>
@@ -133,7 +133,7 @@
                     </div>
                     <div class="col-md-8">
                         <div class="row" style="height: 360px;">
-                            <div class="col-md-8" id="paddingalinear">
+                            <div class="col-md-8 paddingalinear">
                                 <h1 class="info">Información General</h1>
                                 <p><span>Curso:</span></p>
                                 <ul>
@@ -155,8 +155,10 @@
                                 <p><span>Años de experiencia: </span>6 años</p>
                                 <br />--%>
                                 <div class="boton">
-                                    <button type="button" title="Like" onclick="alert('Has recomendado a este profesor')">
-                                        <img src="Imagenes/like.png" style="width: 30px; height: 30px" /></button><span class="rate"><%#Eval("likes")%></span>
+                                    <asp:Button ID="btnLike" runat="server" Text="Me gusta!" OnClick="btnLike_Click" /><img src="Imagenes/like.png" style="width: 30px; height: 30px" />
+                                    <span class="rate"><%#Eval("likes")%></span>
+                                    <%--<button type="button" title="Like" onclick="alert('Has recomendado a este profesor')">
+                                        </button>--%>
                                     <button type="button" title="Reportar profesor" onclick="Rform()" style="margin-left: 5%">
                                         <img src="Imagenes/Block.png" style="width: 30px; height: 30px" /></button><span class="rate"></span>
                                 </div>
@@ -165,7 +167,7 @@
                         </div>
                         
                         <div class="row">
-                            <div class="col-md-8" id="paddingalinear">
+                            <div class="col-md-8 paddingalinear">
                                 <h1 class="info" id="comentarios">Comentarios:</h1>
                                 <%--<p><span>El 85% de los comentarios son positivos</span></p>--%>
                                 <asp:Label ID="lblComentarios" runat="server" Text="Ingrese su comentario:"></asp:Label><br />
@@ -217,6 +219,7 @@
 
             </ItemTemplate>
         </asp:FormView>
+        
 
         <h2>Comentarios Pasados:</h2>
 
