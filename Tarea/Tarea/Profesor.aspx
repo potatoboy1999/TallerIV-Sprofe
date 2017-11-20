@@ -59,6 +59,8 @@
             border-radius: 10px;
             background-color: lightgrey;
             padding: 5px;
+            margin-top:10px;
+            margin-bottom:10px;
         }
 
         .rate {
