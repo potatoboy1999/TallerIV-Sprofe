@@ -180,6 +180,7 @@
     </Compile>
     <Compile Include="Models\accesoBD.cs" />
     <Compile Include="Models\Profesor.cs" />
+    <Compile Include="Models\Valoracion.cs" />
     <Compile Include="Profesor.aspx.cs">
       <DependentUpon>Profesor.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>

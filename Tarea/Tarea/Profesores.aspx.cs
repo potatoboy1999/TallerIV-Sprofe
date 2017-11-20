@@ -13,5 +13,14 @@ namespace Tarea
         {
 
         }
+
+        protected void sdsMejorProfe_Selected(object sender, SqlDataSourceStatusEventArgs e)
+        {
+            if (e.AffectedRows == 0)
+            {
+                PanelTrabajador.Visible = false;
+                PanelVago.Visible = true;
+            }
+        }
     }
 }

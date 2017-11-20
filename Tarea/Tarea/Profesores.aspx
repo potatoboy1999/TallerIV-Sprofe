@@ -39,10 +39,13 @@
         #contenido{
             min-height: 600px;
         }
-
+        .relleno{
+            min-height:356px;
+        }
     </style>
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="Body" runat="server">
+    <asp:Panel ID="PanelTrabajador" runat="server">
     <section class="container-fluid">
         <div class="row" id="titulo">
             <h1 class="text-center">Nuestros Docentes </h1>
@@ -62,7 +65,7 @@
                             <asp:Label Text='<%# Eval("puntaje") %>' runat="server" ID="puntajeLabel" /><br />
                         </ItemTemplate>
                     </asp:FormView>
-                    <asp:SqlDataSource runat="server" ID="sdsMejorProfe" ConnectionString='<%$ ConnectionStrings:ConeccionSprofe %>' SelectCommand="SELECT TOP (1) profesores.nombre, profesores.apellido_paterno, profesores.descripcion, profesores.imagen, profesores.puntaje, profesores.idprofesor FROM profeoncursos INNER JOIN profesores ON profeoncursos.idprofesor = profesores.idprofesor WHERE (profeoncursos.idcurso = @idcurso) ORDER BY profesores.puntaje DESC">
+                    <asp:SqlDataSource runat="server" ID="sdsMejorProfe" ConnectionString='<%$ ConnectionStrings:ConeccionSprofe %>' SelectCommand="SELECT TOP (1) profesores.nombre, profesores.apellido_paterno, profesores.descripcion, profesores.imagen, profesores.puntaje, profesores.idprofesor FROM profeoncursos INNER JOIN profesores ON profeoncursos.idprofesor = profesores.idprofesor WHERE (profeoncursos.idcurso = @idcurso) ORDER BY profesores.puntaje DESC" OnSelected="sdsMejorProfe_Selected">
                         <SelectParameters>
                             <asp:QueryStringParameter QueryStringField="codigocurso" Name="idcurso"></asp:QueryStringParameter>
                         </SelectParameters>
@@ -93,4 +96,15 @@
 
         </div>
     </section>
+    </asp:Panel>
+    <asp:Panel ID="PanelVago" runat="server" Visible="false">
+        <br />
+        <div class="container">
+            <div class="jumbotron">
+                <h1>Perdón profe! :( <small>No tuvimos tiempo de llenar la base de datos</small></h1>
+                
+            </div>
+        </div>
+        <div class="relleno"></div>
+    </asp:Panel>
 </asp:Content>

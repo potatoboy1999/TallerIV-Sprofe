@@ -124,6 +124,7 @@
 <asp:Content ID="Content2" ContentPlaceHolderID="Body" runat="server">
 
     <div class="container" id="Profe">
+        
 
         <asp:FormView ID="fvProfe" Width="100%" runat="server" DataSourceID="sdsProfe">
             <ItemTemplate>
@@ -173,6 +174,7 @@
                                 <br />--%>
                                 <div class="boton">
                                     <asp:Button ID="btnLike" CssClass="btn btn-primary" runat="server" Text="Me gusta!" OnClick="btnLike_Click" /><img src="Imagenes/like.png" style="width: 30px; height: 30px" />
+                                    <asp:Button ID="btnNoLike" CssClass="btn btn-primary" runat="server" Text="Ya no me gusta" Visible="false" OnClick="btnNoLike_Click"/>  
                                     <span class="rate"><%#Eval("likes")%></span>
                                     <%--<button type="button" title="Like" onclick="alert('Has recomendado a este profesor')">
                                         </button>--%>
@@ -253,7 +255,10 @@
 
 
         <div class="publirota">
-            <div class="relleno"></div>
+            <div class="relleno">
+                
+                <asp:Label ID="Label2" runat="server" Text="Label" Visible="true"></asp:Label>
+            </div>
             <br />
             <asp:AdRotator ID="AdRotator1" runat="server" DataSourceID="xmlPublicidad" CssClass="img-responsive" Width="800" Height="200"/>
         </div>

@@ -14,7 +14,20 @@ namespace Tarea
 
         protected void Page_Load(object sender, EventArgs e)
         {
+            var idusuario = Page.User.Identity.Name;
+            
 
+            var Master = new accesoBD();
+            var idProfe = Convert.ToInt32(Request.QueryString["codProf"]);
+            var diolike = Master.verificarLike(idProfe, idusuario);
+            if (diolike) 
+            {
+                Label2.Visible = false;
+                var btnnoli = (Button)(fvProfe.FindControl("btnNoLike"));
+                btnnoli.Visible = true;
+                var btnli = (Button)(fvProfe.FindControl("btnLike"));
+                btnnoli.Visible = false;
+            }
         }
 
         protected void btnComentar_Click(object sender, EventArgs e)
@@ -53,10 +66,20 @@ namespace Tarea
         protected void btnLike_Click(object sender, EventArgs e)
         {
             accesoBD datos = new accesoBD();
+            var idusuario = Page.User.Identity.Name;
             var idProf = Convert.ToInt32(Request.QueryString["codProf"]);
-            datos.AddLike(idProf);
+            datos.AddLike(idProf,idusuario);
             Response.Redirect("Profesor.aspx?codProf=" + idProf + "#");
         }
+
+        protected void btnNoLike_Click(object sender, EventArgs e)
+        {
+            accesoBD datos = new accesoBD();
+            var idusuario = Page.User.Identity.Name;
+            var idProf = Convert.ToInt32(Request.QueryString["codProf"]);
+            datos.RemoveLike(idProf, idusuario);
+            Response.Redirect("Profesor.aspx?codProf=" + idProf + "#");
+        }        
 
         protected void sdsTitulos_Selected(object sender, SqlDataSourceStatusEventArgs e)
         {

@@ -57,7 +57,8 @@
 
         select {
             height: 30px;
-            width: 250px;
+            width: 325px;
+            
         }
 
         .todoancho {
@@ -77,7 +78,7 @@
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="Body" runat="server">
     <div class="container-fluid todoancho">
-        <header class="tituloCarreras">
+        <header class="tituloCarreras text-center">
             <h1>Encuentra a tu profe!</h1>
         </header>
         <br />
@@ -111,7 +112,7 @@
                 </div>
             </section>
         </div>        
-    </div>
+    </div>    
     <div class="relleno"></div>
     <%--<div id="wrapper">
         <section class="tituloCarreras">

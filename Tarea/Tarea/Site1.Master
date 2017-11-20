@@ -74,8 +74,8 @@
                 </div>
                 <div id="navbar" class="navbar-collapse collapse">
                     <div class="navbar-form navbar-right" id="headerBtns">
-                        <button type="button" class="btn btn-default" onclick="location.href='Carreras.aspx';"><span class="glyphicon glyphicon-search"></span>Empieza tu búsqueda</button>
-                        <button type="button" class="btn btn-default" onclick="location.href='Contactenos.aspx';"><span class="glyphicon glyphicon-envelope"></span>Contáctenos</button>
+                        <button type="button" class="btn btn-default" onclick="location.href='Carreras.aspx';"><span class="glyphicon glyphicon-search"></span> Empieza tu búsqueda</button>
+                        <button type="button" class="btn btn-default" onclick="location.href='Contactenos.aspx';"><span class="glyphicon glyphicon-envelope"></span> Contáctenos</button>
                         <asp:LoginView ID="lvLogin" runat="server">
                             <AnonymousTemplate>
                                 <asp:Button CssClass="btn btn-primary" ID="btnLogIn" runat="server" Text="Ingresa!" OnClick="btnLogIn_Click" />
