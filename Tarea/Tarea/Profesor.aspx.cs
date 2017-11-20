@@ -22,14 +22,15 @@ namespace Tarea
 
         protected void fvComentarios_ItemInserting(object sender, FormViewInsertEventArgs e)
         {
-            var idProfe = Request.QueryString["codProf"];
-            var idUser = Membership.GetUser().ProviderUserKey;
+
+            var idProfe = Convert.ToInt32(Request.QueryString["codProf"]);
+            var usuario = Page.User.Identity.Name;
             var val = "Positivo";
 
             e.Values["idprofesor"] = idProfe;
-            e.Values["idusuario"] = idUser;
-            e.Values["valoración"] = val;
-            
+            e.Values["usuarionombre"] = usuario;
+            e.Values["valoracion"] = val;
+
         }
 
         protected void fvComentarios_ItemInserted(object sender, FormViewInsertedEventArgs e)

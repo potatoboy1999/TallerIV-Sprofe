@@ -154,17 +154,23 @@
                             <asp:Label ID="lblComentarios" runat="server" Text="Ingrese su comentario:"></asp:Label><br />
                             <asp:FormView ID="fvComentarios" DefaultMode="Insert" runat="server" DataKeyNames="idprofesor,idusuario" DataSourceID="sdsComentarios" OnItemInserted="fvComentarios_ItemInserted" OnItemInserting="fvComentarios_ItemInserting">
                                 <InsertItemTemplate>
+
                                     Titulo:<br />
                                     <asp:TextBox Text='<%# Bind("titulo") %>' runat="server" ID="tituloTextBox" /><br />
+
                                     Comentario:<br />
                                     <asp:TextBox Text='<%# Bind("comentario") %>' runat="server" ID="comentarioTextBox" /><br />
-                                    valoración:
+
+                                    Valoración:<br />
+
                                     <asp:DropDownList ID="ddlValoracion" runat="server">
                                         <asp:ListItem Selected="True" Value="Positivo" Text='Positivo'></asp:ListItem>
                                         <asp:ListItem Value="Negativo" Text='Negativo'></asp:ListItem>
                                     </asp:DropDownList>
                                     <br />
+
                                     <asp:Button CssClass="btn btn-primary" runat="server" Text="Insertar" CommandName="Insert" ID="InsertButton" CausesValidation="True" />
+
                                 </InsertItemTemplate>
                             </asp:FormView>
 
@@ -205,23 +211,26 @@
             </ItemTemplate>
         </asp:Repeater>
 
-        <asp:SqlDataSource runat="server" ID="sdsComentarios" ConnectionString='<%$ ConnectionStrings:ConeccionSprofe %>' DeleteCommand="DELETE FROM [comentarios] WHERE [idprofesor] = @idprofesor AND [idusuario] = @idusuario" InsertCommand="INSERT INTO [comentarios] ([idprofesor], [idusuario], [titulo], [comentario], [valoración]) VALUES (@idprofesor, @idusuario, @titulo, @comentario, @valoración)" SelectCommand="SELECT * FROM [comentarios] WHERE ([idprofesor] = @idprofesor)" UpdateCommand="UPDATE [comentarios] SET [titulo] = @titulo, [comentario] = @comentario, [valoración] = @valoración WHERE [idprofesor] = @idprofesor AND [idusuario] = @idusuario" OnSelected="sdsComentarios_Selected">
+        <asp:SqlDataSource runat="server" ID="sdsComentarios" ConnectionString='<%$ ConnectionStrings:ConeccionSprofe %>' SelectCommand="SELECT * FROM [comentarios] WHERE ([idprofesor] = @idprofesor)" OnSelected="sdsComentarios_Selected" DeleteCommand="DELETE FROM [comentarios] WHERE [idprofesor] = @idprofesor" InsertCommand="INSERT INTO [comentarios] ([idprofesor], [usuarionombre], [titulo], [comentario], [valoracion]) VALUES (@idprofesor, @usuarionombre, @titulo, @comentario, @valoracion)" UpdateCommand="UPDATE [comentarios] SET [usuarionombre] = @usuarionombre, [titulo] = @titulo, [comentario] = @comentario, [valoracion] = @valoracion WHERE [idprofesor] = @idprofesor">
+            <DeleteParameters>
+                <asp:Parameter Name="idprofesor" Type="Int32"></asp:Parameter>
+            </DeleteParameters>
             <InsertParameters>
                 <asp:Parameter Name="idprofesor" Type="Int32"></asp:Parameter>
-                <asp:Parameter Name="idusuario" Type="Object"></asp:Parameter>
+                <asp:Parameter Name="usuarionombre" Type="String"></asp:Parameter>
                 <asp:Parameter Name="titulo" Type="String"></asp:Parameter>
                 <asp:Parameter Name="comentario" Type="String"></asp:Parameter>
-                <asp:Parameter Name="valoraci&#243;n" Type="String"></asp:Parameter>
+                <asp:Parameter Name="valoracion" Type="String"></asp:Parameter>
             </InsertParameters>
             <SelectParameters>
                 <asp:QueryStringParameter QueryStringField="codProf" Name="idprofesor" Type="Int32"></asp:QueryStringParameter>
             </SelectParameters>
             <UpdateParameters>
+                <asp:Parameter Name="usuarionombre" Type="String"></asp:Parameter>
                 <asp:Parameter Name="titulo" Type="String"></asp:Parameter>
                 <asp:Parameter Name="comentario" Type="String"></asp:Parameter>
-                <asp:Parameter Name="valoraci&#243;n" Type="String"></asp:Parameter>
+                <asp:Parameter Name="valoracion" Type="String"></asp:Parameter>
                 <asp:Parameter Name="idprofesor" Type="Int32"></asp:Parameter>
-                <asp:Parameter Name="idusuario" Type="Object"></asp:Parameter>
             </UpdateParameters>
         </asp:SqlDataSource>
 
