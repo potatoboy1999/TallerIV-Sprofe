@@ -1,0 +1,437 @@
+﻿<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.5\build\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props" Condition="Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.5\build\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" />
+  <Import Project="..\packages\Microsoft.Net.Compilers.2.1.0\build\Microsoft.Net.Compilers.props" Condition="Exists('..\packages\Microsoft.Net.Compilers.2.1.0\build\Microsoft.Net.Compilers.props')" />
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{EBA42B58-8D66-4AC4-92FF-618DA8FABDEB}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>FinalMYA</RootNamespace>
+    <AssemblyName>FinalMYA</AssemblyName>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <UseIISExpress>true</UseIISExpress>
+    <Use64BitIISExpress />
+    <IISExpressSSLPort />
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+    <UseGlobalApplicationHostFile />
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.CodeDom.Providers.DotNetCompilerPlatform, Version=1.0.5.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.5\lib\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="App_Data\Myappointments.mdf" />
+    <Content Include="App_Data\Myappointments_log.ldf">
+      <DependentUpon>Myappointments.mdf</DependentUpon>
+    </Content>
+    <Content Include="App_Data\XMLFile1.xml" />
+    <Content Include="Contacto.aspx" />
+    <Content Include="editarPerfil.aspx" />
+    <Content Include="Imagenes\profle-256.png" />
+    <Content Include="Iniciar_sesion.aspx" />
+    <Content Include="Quienes_somos.aspx" />
+    <Content Include="Scripts\npm.js" />
+    <Content Include="estilo\bootstrap-theme.css" />
+    <Content Include="estilo\bootstrap-theme.min.css" />
+    <Content Include="estilo\bootstrap.css" />
+    <Content Include="estilo\bootstrap.min.css" />
+    <Content Include="cssSinFooter.css" />
+    <Content Include="Default.aspx" />
+    <Content Include="editarHorario.aspx" />
+    <Content Include="Esqueleto.Master" />
+    <Content Include="fonts\glyphicons-halflings-regular.svg" />
+    <Content Include="FotosDoctores\DocH.png" />
+    <Content Include="FotosDoctores\DocM.png" />
+    <Content Include="FotosDoctores\fotoP.png" />
+    <Content Include="Imagenes\Banda.png" />
+    <Content Include="Imagenes\concurso-medicos-2016-vagas.jpg" />
+    <Content Include="Imagenes\fondoD.jpg" />
+    <Content Include="Imagenes\Home-48.png" />
+    <Content Include="Imagenes\home-64.png" />
+    <Content Include="Imagenes\ringing-phone-64.png" />
+    <Content Include="Imagenes\ui-04-2-64.png" />
+    <Content Include="Imagenes\x-05-64.png" />
+    <Content Include="Imagenes\call-64.png" />
+    <Content Include="Images\carrusel5.png" />
+    <Content Include="Images\carrusel1.jpg" />
+    <Content Include="Images\carrusel2.jpg" />
+    <Content Include="Images\carrusel3.jpg" />
+    <Content Include="Images\carrusel4.jpg" />
+    <Content Include="perfilMedico.aspx" />
+    <Content Include="fonts\glyphicons-halflings-regular.woff2" />
+    <Content Include="fonts\glyphicons-halflings-regular.woff" />
+    <Content Include="fonts\glyphicons-halflings-regular.ttf" />
+    <Content Include="fonts\glyphicons-halflings-regular.eot" />
+    <Content Include="estilo\bootstrap.min.css.map" />
+    <Content Include="estilo\bootstrap.css.map" />
+    <Content Include="estilo\bootstrap-theme.min.css.map" />
+    <Content Include="estilo\bootstrap-theme.css.map" />
+    <None Include="packages.config" />
+    <None Include="Scripts\jquery-3.2.1.intellisense.js" />
+    <Content Include="Scripts\bootstrap.js" />
+    <Content Include="Scripts\bootstrap.min.js" />
+    <Content Include="Scripts\jquery-3.2.1.js" />
+    <Content Include="Scripts\jquery-3.2.1.min.js" />
+    <Content Include="Scripts\jquery-3.2.1.slim.js" />
+    <Content Include="Scripts\jquery-3.2.1.slim.min.js" />
+    <Content Include="Scripts\jquery-3.2.1.slim.min.map" />
+    <Content Include="Scripts\jquery-3.2.1.min.map" />
+    <None Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+    <None Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Doctores.aspx" />
+    <Content Include="css.css" />
+    <Content Include="Gine\Armando.aspx" />
+    <Content Include="Gine\Bruno.aspx" />
+    <Content Include="Gine\Fiorella.aspx" />
+    <Content Include="Gine\Leidy.aspx" />
+    <Content Include="Gine\Nicole.aspx" />
+    <Content Include="Global.asax" />
+    <Content Include="Imagenes\child_boy-128.png" />
+    <Content Include="Imagenes\horario.png" />
+    <Content Include="Imagenes\logo_myappointments.png" />
+    <Content Include="Imagenes\x-05-128.png" />
+    <Content Include="Odo\Alvaro.aspx" />
+    <Content Include="Odo\Ammy.aspx" />
+    <Content Include="Odo\Giovana.aspx" />
+    <Content Include="Odo\Melanie.aspx" />
+    <Content Include="Odo\Nicole.aspx" />
+    <Content Include="ofta\Andrea.aspx" />
+    <Content Include="ofta\Carla.aspx" />
+    <Content Include="ofta\Carlos.aspx" />
+    <Content Include="ofta\Fabrizio.aspx" />
+    <Content Include="ofta\Gabriel.aspx" />
+    <Content Include="Ped\Franchesca.aspx" />
+    <Content Include="Ped\Gianella.aspx" />
+    <Content Include="Ped\Mariano.aspx" />
+    <Content Include="Ped\Priscilla.aspx" />
+    <Content Include="Ped\Selene.aspx" />
+    <Content Include="PINCodeLogin.aspx" />
+    <Content Include="Registro.aspx" />
+    <Content Include="termsofuse.aspx" />
+    <Content Include="Web.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Contacto.aspx.cs">
+      <DependentUpon>Contacto.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Contacto.aspx.designer.cs">
+      <DependentUpon>Contacto.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Doctores.aspx.cs">
+      <DependentUpon>Doctores.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Doctores.aspx.designer.cs">
+      <DependentUpon>Doctores.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Default.aspx.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Default.aspx.designer.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="editarHorario.aspx.cs">
+      <DependentUpon>editarHorario.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="editarHorario.aspx.designer.cs">
+      <DependentUpon>editarHorario.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="editarPerfil.aspx.cs">
+      <DependentUpon>editarPerfil.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="editarPerfil.aspx.designer.cs">
+      <DependentUpon>editarPerfil.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Esqueleto.Master.cs">
+      <DependentUpon>Esqueleto.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Esqueleto.Master.designer.cs">
+      <DependentUpon>Esqueleto.Master</DependentUpon>
+    </Compile>
+    <Compile Include="Gine\Armando.aspx.cs">
+      <DependentUpon>Armando.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Gine\Armando.aspx.designer.cs">
+      <DependentUpon>Armando.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Gine\Bruno.aspx.cs">
+      <DependentUpon>Bruno.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Gine\Bruno.aspx.designer.cs">
+      <DependentUpon>Bruno.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Gine\Fiorella.aspx.cs">
+      <DependentUpon>Fiorella.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Gine\Fiorella.aspx.designer.cs">
+      <DependentUpon>Fiorella.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Gine\Leidy.aspx.cs">
+      <DependentUpon>Leidy.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Gine\Leidy.aspx.designer.cs">
+      <DependentUpon>Leidy.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Gine\Nicole.aspx.cs">
+      <DependentUpon>Nicole.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Gine\Nicole.aspx.designer.cs">
+      <DependentUpon>Nicole.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Global.asax.cs">
+      <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="Iniciar_sesion.aspx.cs">
+      <DependentUpon>Iniciar_sesion.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Iniciar_sesion.aspx.designer.cs">
+      <DependentUpon>Iniciar_sesion.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Odo\Alvaro.aspx.cs">
+      <DependentUpon>Alvaro.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Odo\Alvaro.aspx.designer.cs">
+      <DependentUpon>Alvaro.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Odo\Ammy.aspx.cs">
+      <DependentUpon>Ammy.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Odo\Ammy.aspx.designer.cs">
+      <DependentUpon>Ammy.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Odo\Giovana.aspx.cs">
+      <DependentUpon>Giovana.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Odo\Giovana.aspx.designer.cs">
+      <DependentUpon>Giovana.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Odo\Melanie.aspx.cs">
+      <DependentUpon>Melanie.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Odo\Melanie.aspx.designer.cs">
+      <DependentUpon>Melanie.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Odo\Nicole.aspx.cs">
+      <DependentUpon>Nicole.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Odo\Nicole.aspx.designer.cs">
+      <DependentUpon>Nicole.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ofta\Andrea.aspx.cs">
+      <DependentUpon>Andrea.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ofta\Andrea.aspx.designer.cs">
+      <DependentUpon>Andrea.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ofta\Carla.aspx.cs">
+      <DependentUpon>Carla.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ofta\Carla.aspx.designer.cs">
+      <DependentUpon>Carla.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ofta\Carlos.aspx.cs">
+      <DependentUpon>Carlos.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ofta\Carlos.aspx.designer.cs">
+      <DependentUpon>Carlos.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ofta\Fabrizio.aspx.cs">
+      <DependentUpon>Fabrizio.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ofta\Fabrizio.aspx.designer.cs">
+      <DependentUpon>Fabrizio.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ofta\Gabriel.aspx.cs">
+      <DependentUpon>Gabriel.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ofta\Gabriel.aspx.designer.cs">
+      <DependentUpon>Gabriel.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Ped\Franchesca.aspx.cs">
+      <DependentUpon>Franchesca.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Ped\Franchesca.aspx.designer.cs">
+      <DependentUpon>Franchesca.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Ped\Gianella.aspx.cs">
+      <DependentUpon>Gianella.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Ped\Gianella.aspx.designer.cs">
+      <DependentUpon>Gianella.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Ped\Mariano.aspx.cs">
+      <DependentUpon>Mariano.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Ped\Mariano.aspx.designer.cs">
+      <DependentUpon>Mariano.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Ped\Priscilla.aspx.cs">
+      <DependentUpon>Priscilla.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Ped\Priscilla.aspx.designer.cs">
+      <DependentUpon>Priscilla.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Ped\Selene.aspx.cs">
+      <DependentUpon>Selene.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Ped\Selene.aspx.designer.cs">
+      <DependentUpon>Selene.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="PINCodeLogin.aspx.cs">
+      <DependentUpon>PINCodeLogin.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="PINCodeLogin.aspx.designer.cs">
+      <DependentUpon>PINCodeLogin.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Quienes_somos.aspx.cs">
+      <DependentUpon>Quienes_somos.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Quienes_somos.aspx.designer.cs">
+      <DependentUpon>Quienes_somos.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Registro.aspx.cs">
+      <DependentUpon>Registro.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Registro.aspx.designer.cs">
+      <DependentUpon>Registro.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="perfilMedico.aspx.cs">
+      <DependentUpon>perfilMedico.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="perfilMedico.aspx.designer.cs">
+      <DependentUpon>perfilMedico.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="termsofuse.aspx.cs">
+      <DependentUpon>termsofuse.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="termsofuse.aspx.designer.cs">
+      <DependentUpon>termsofuse.aspx</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Models\" />
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>True</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>51504</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>http://localhost:51504/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>Este proyecto hace referencia a los paquetes NuGet que faltan en este equipo. Use la restauración de paquetes NuGet para descargarlos. Para obtener más información, consulte http://go.microsoft.com/fwlink/?LinkID=322105. El archivo que falta es {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('..\packages\Microsoft.Net.Compilers.2.1.0\build\Microsoft.Net.Compilers.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Microsoft.Net.Compilers.2.1.0\build\Microsoft.Net.Compilers.props'))" />
+    <Error Condition="!Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.5\build\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.5\build\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props'))" />
+  </Target>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
