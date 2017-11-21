@@ -69,6 +69,7 @@
     <Content Include="404.aspx" />
     <Content Include="App_Data\Profesores.xml" />
     <Content Include="App_Data\Publicherryxd.xml" />
+    <Content Include="App_Data\publivertical.xml" />
     <Content Include="App_Data\Sprofe.mdf" />
     <Content Include="App_Data\Sprofe_log.ldf">
       <DependentUpon>Sprofe.mdf</DependentUpon>
@@ -104,6 +105,9 @@
     <Content Include="Imagenes\Profesores\profe3.jpg" />
     <Content Include="Imagenes\publicidad1.JPG" />
     <Content Include="Imagenes\Publi\crisol.jpg" />
+    <Content Include="Imagenes\Publi\publi1.jpg" />
+    <Content Include="Imagenes\Publi\publi2.jpg" />
+    <Content Include="Imagenes\Publi\publi3.jpg" />
     <Content Include="Imagenes\Publi\tai.png" />
     <Content Include="js\bootstrap.js" />
     <Content Include="js\bootstrap.min.js" />
