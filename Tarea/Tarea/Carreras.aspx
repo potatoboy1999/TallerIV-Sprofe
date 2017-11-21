@@ -86,7 +86,7 @@
             <section class="col-md-3">
                 <div class="relleno jumbotron">
                     PUBLICIDAD
-                    <asp:AdRotator ID="AdRotator1" runat="server" Width="100" DataSourceID="xdspublicidadvertical" BorderColor="red" />
+                    <asp:AdRotator ID="AdRotator1" runat="server" Width="100" CssClass="img-responsive" DataSourceID="xdspublicidadvertical" BorderColor="red" AlternateTextField="PUBLICIDAD VERTICAL" TabIndex="0" />
                     <asp:XmlDataSource runat="server" ID="xdspublicidadvertical" DataFile="~/App_Data/publivertical.xml"></asp:XmlDataSource>
                 </div>
             </section>
@@ -115,7 +115,7 @@
             <section class="col-md-3">
                 <div class="relleno jumbotron">
                     PUBLICIDAD
-                    <asp:AdRotator ID="AdRotator2" runat="server" DataSourceID="xdspublicidadvertical" />
+                    <asp:AdRotator ID="AdRotator2" runat="server" DataSourceID="xdspublicidadvertical"/>
                 </div>
             </section>
         </div>
