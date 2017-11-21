@@ -58,7 +58,6 @@
         select {
             height: 30px;
             width: 325px;
-            
         }
 
         .todoancho {
@@ -104,6 +103,11 @@
                             <asp:Parameter DefaultValue="comunicaciones" Name="nombrecarrera"></asp:Parameter>
                         </SelectParameters>
                     </asp:SqlDataSource>
+                    <h2>Si sabes el apellido de tu profesor buscalo aquí</h2>
+                    <asp:TextBox ID="txtbuscador" runat="server" Width="305px" OnTextChanged="txtbuscador_TextChanged"></asp:TextBox>
+                    <br />
+                    <asp:Button ID="buscar" CssClass="btn btn-primary" runat="server" Text="A Buscar!" OnClick="buscar_Click" /><br />
+                    <asp:Label ID="Sorry" runat="server" Text="Lo sentimos no se encontro dicho profesor" Visible="false"></asp:Label>
                 </div>
             </section>
             <section class="col-md-3">
@@ -111,8 +115,8 @@
                     PUBLICIDAD
                 </div>
             </section>
-        </div>        
-    </div>    
+        </div>
+    </div>
     <div class="relleno"></div>
     <%--<div id="wrapper">
         <section class="tituloCarreras">
