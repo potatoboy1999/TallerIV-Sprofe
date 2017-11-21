@@ -29,7 +29,7 @@
         }
         @media (min-width:992px){
             .tamaño{
-                height:565px;
+                height:455px;
             }
         }  
         .contacto_div{
@@ -58,12 +58,12 @@
                 <div class="col-md-6">
                     <div class="jumbotron contacto">
                         <h1 class="text-center titulo">Ayúdanos a mejorar !!</h1>
-                         <asp:TextBox ID="TextBox6" runat="server" placeholder="Nombre" Width="90%" CssClass="input"></asp:TextBox>
+                         <%--<asp:TextBox ID="TextBox6" runat="server" placeholder="Nombre" Width="90%" CssClass="input"></asp:TextBox>
                         <br />
                         <br />
                         <asp:TextBox ID="TextBox5" runat="server" placeholder="Correo Electrónico" Width="90%" CssClass="input"></asp:TextBox>
                         <br />
-                        <br />
+                        <br />--%>
                         <textarea id="TextArea2" placeholder="Escribenos aquí..."></textarea>
                         <button type="button" onclick="alert('Gracias por escribirnos, te responderemos lo más pronto posible!')" class="btn btn-default" style="margin-top:4px;">Enviar</button>
                     </div>

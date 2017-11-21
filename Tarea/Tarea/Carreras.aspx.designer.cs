@@ -13,6 +13,24 @@ namespace Tarea {
     public partial class startSearch {
         
         /// <summary>
+        /// Control AdRotator1.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.AdRotator AdRotator1;
+        
+        /// <summary>
+        /// Control xdspublicidadvertical.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.XmlDataSource xdspublicidadvertical;
+        
+        /// <summary>
         /// Control ddlCarreras.
         /// </summary>
         /// <remarks>
@@ -83,5 +101,14 @@ namespace Tarea {
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Label Sorry;
+        
+        /// <summary>
+        /// Control AdRotator2.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.AdRotator AdRotator2;
     }
 }

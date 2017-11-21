@@ -14,6 +14,11 @@ namespace Tarea
 
         protected void Page_Load(object sender, EventArgs e)
         {
+            if (Request.QueryString["codProf"] == null || Request.QueryString["codProf"]=="")
+            {
+                Response.Redirect("Default.aspx");
+            }
+
             var idusuario = Page.User.Identity.Name;
             
 
