@@ -13,11 +13,11 @@
         }
 
         .cuadrito {
-            color: darkgoldenrod;
             background-color: white;
             border-radius: 15px;
             padding: 20px;
             margin: 3px;
+            margin-bottom: 20px;
         }
 
         .profe {
@@ -55,11 +55,16 @@
         .sinmargen {
             margin: 0;
             margin-top: 5px;
-            color: darkgoldenrod;
         }
 
         .puntuaje{
             padding-top:5px;
+        }
+
+        #elbest{
+            border-bottom: solid;
+            border-bottom-color: cadetblue;
+            border-width: 2px;
         }
     </style>
 </asp:Content>
@@ -73,11 +78,12 @@
             <div class="row" id="contenido">
                 <div class="col-md-4">
                     <div class="text-center cuadrito">
+                        <img src="Imagenes/Corona.png" width="250px"/>
                         <asp:FormView CssClass="bestoprofe" runat="server" DataSourceID="sdsMejorProfe" DataKeyNames="idprofesor">
                             <ItemTemplate>
                                 <a href="Profesor.aspx?codProf=<%#Eval("idprofesor")%>">
-                                    <img src="Imagenes/Profesores/<%# Eval("imagen") %>" class="img-responsive profe" /></a>
-                                <h2>
+                                    <img src="Imagenes/Profesores/<%# Eval("imagen") %>" class="img-responsive profe" style="border-radius: 100%; width: 250px; height: 250px;"/></a>
+                                <h2 id="elbest">
                                     <asp:Label Text='<%# Eval("nombre") %>' runat="server" ID="nombreLabel" />
                                     <asp:Label Text='<%# Eval("apellido_paterno") %>' runat="server" ID="apellido_paternoLabel" /></h2>
                                 <div class="row">
