@@ -66,6 +66,7 @@
 
         .relleno {
             min-height: 30px;
+            margin-left: 80px;
         }
 
         @media (min-width:992px) {
@@ -85,8 +86,8 @@
         <br />
         <div class="row">
             <section class="col-md-3">
-                <div class="relleno jumbotron">
-                    <p>PUBLICIDAD</p>
+                <div class="relleno">
+                    <%--<p>PUBLICIDAD</p>--%>
                     <asp:AdRotator ID="AdRotator1" runat="server" Width="150" CssClass="img-responsive" DataSourceID="xdspublicidadvertical" BorderColor="red" AlternateTextField="PUBLICIDAD VERTICAL" TabIndex="0" />
                     <asp:XmlDataSource runat="server" ID="xdspublicidadvertical" DataFile="~/App_Data/publivertical.xml"></asp:XmlDataSource>
                 </div>
@@ -109,13 +110,13 @@
                     <h2>Si sabes el apellido de tu profesor buscalo aquí</h2>
                     <asp:TextBox ID="txtbuscador" runat="server" Width="305px" OnTextChanged="txtbuscador_TextChanged"></asp:TextBox>
                     <br />
-                    <asp:Button ID="buscar" CssClass="btn btn-primary" runat="server" Text="A Buscar!" OnClick="buscar_Click" /><br />
+                    <asp:Button ID="buscar" CssClass="btn btn-primary" runat="server" Text="A Buscar!" OnClick="buscar_Click" Style="margin-top: 20px;"/><br />
                     <asp:Label ID="Sorry" runat="server" Text="Lo sentimos no se encontro dicho profesor" Visible="false"></asp:Label>
                 </div>
             </section>
             <section class="col-md-3">
-                <div class="relleno jumbotron">
-                    <p>PUBLICIDAD</p>
+                <div class="relleno">
+                    <%--<p>PUBLICIDAD</p>--%>
                     <asp:AdRotator ID="AdRotator2" Width="150" runat="server" DataSourceID="xdspublicidadvertical"/>
                 </div>
             </section>
