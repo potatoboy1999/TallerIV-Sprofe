@@ -79,14 +79,15 @@
     <div class="container-fluid todoancho">
         <header class="tituloCarreras text-center">
             <h1>Encuentra a tu profe!</h1>
+            <img src="Imagenes/Publi/Ad1.jpg" />
         </header>
         <br />
         <br />
         <div class="row">
             <section class="col-md-3">
                 <div class="relleno jumbotron">
-                    PUBLICIDAD
-                    <asp:AdRotator ID="AdRotator1" runat="server" Width="100" CssClass="img-responsive" DataSourceID="xdspublicidadvertical" BorderColor="red" AlternateTextField="PUBLICIDAD VERTICAL" TabIndex="0" />
+                    <p>PUBLICIDAD</p>
+                    <asp:AdRotator ID="AdRotator1" runat="server" Width="150" CssClass="img-responsive" DataSourceID="xdspublicidadvertical" BorderColor="red" AlternateTextField="PUBLICIDAD VERTICAL" TabIndex="0" />
                     <asp:XmlDataSource runat="server" ID="xdspublicidadvertical" DataFile="~/App_Data/publivertical.xml"></asp:XmlDataSource>
                 </div>
             </section>
@@ -114,8 +115,8 @@
             </section>
             <section class="col-md-3">
                 <div class="relleno jumbotron">
-                    PUBLICIDAD
-                    <asp:AdRotator ID="AdRotator2" runat="server" DataSourceID="xdspublicidadvertical"/>
+                    <p>PUBLICIDAD</p>
+                    <asp:AdRotator ID="AdRotator2" Width="150" runat="server" DataSourceID="xdspublicidadvertical"/>
                 </div>
             </section>
         </div>

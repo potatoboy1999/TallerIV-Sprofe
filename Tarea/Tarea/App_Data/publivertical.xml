@@ -1,12 +1,12 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <Advertisements>
   <Ad>
-    <ImageUrl>Imagenes\Publi\publi1.jpg</ImageUrl>    
+    <ImageUrl>Imagenes/Publi/banner1.jpg</ImageUrl>    
   </Ad>
   <Ad>
-    <ImageUrl>Imagenes\Publi\publi2.jpg</ImageUrl>
+    <ImageUrl>Imagenes/Publi/bannerV.gif</ImageUrl>
   </Ad>
   <Ad>
-    <ImageUrl>Imagenes\Publi\publi3.jpg</ImageUrl>
+    <ImageUrl>Imagenes/Publi/bannerB.jpg</ImageUrl>
   </Ad>
 </Advertisements>
