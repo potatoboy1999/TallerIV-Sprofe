@@ -66,6 +66,12 @@
             border-bottom-color: cadetblue;
             border-width: 2px;
         }
+        #corona{
+            position:relative;
+            margin-top: -40px;
+            margin-bottom: -80px;
+            z-index:2;
+        }
     </style>
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="Body" runat="server">
@@ -78,11 +84,11 @@
             <div class="row" id="contenido">
                 <div class="col-md-4">
                     <div class="text-center cuadrito">
-                        <img src="Imagenes/Corona.png" width="250px"/>
+                        <img id="corona" src="Imagenes/Corona.png" width="250px"/>
                         <asp:FormView CssClass="bestoprofe" runat="server" DataSourceID="sdsMejorProfe" DataKeyNames="idprofesor">
                             <ItemTemplate>
                                 <a href="Profesor.aspx?codProf=<%#Eval("idprofesor")%>">
-                                    <img src="Imagenes/Profesores/<%# Eval("imagen") %>" class="img-responsive profe" style="border-radius: 100%; width: 250px; height: 250px;"/></a>
+                                    <img src="Imagenes/Profesores/<%# Eval("imagen") %>" class="img-responsive profe" style="border-radius: 100%; width: 250px; height: 250px; z-index: -1"/></a>
                                 <h2 id="elbest">
                                     <asp:Label Text='<%# Eval("nombre") %>' runat="server" ID="nombreLabel" />
                                     <asp:Label Text='<%# Eval("apellido_paterno") %>' runat="server" ID="apellido_paternoLabel" /></h2>
