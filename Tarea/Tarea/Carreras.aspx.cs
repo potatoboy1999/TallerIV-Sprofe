@@ -13,7 +13,7 @@ namespace Tarea
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-
+            txtbuscador.Text = "";
         }
 
         protected void Button1_Click(object sender, EventArgs e)
